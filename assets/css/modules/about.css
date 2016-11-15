@@ -1,0 +1,167 @@
+/*== Bagian history ==========================================================================================================*/
+
+.history-content {
+	margin-top:64px;
+	background: #f1f4f9;
+}
+
+.history-content .history-wrapper {
+
+}
+
+.history-content .history-wrapper .history-item {
+	background: white;
+	float: left;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.history-content .history-wrapper .history-item .item-title {
+	float: left;
+	width: calc(100% - 60px);
+	padding: 10px 0 10px 0;
+
+	margin: 0 30px;
+
+	border-bottom: solid #F0F2F4 1px;
+
+	text-align: center;
+}
+
+.history-content .history-wrapper .history-item .item-title .logo {
+	width: 100%;
+	float: left;
+}
+
+.history-content .history-wrapper .history-item .item-title .logo img {
+	display: block;
+    margin: 0 auto;
+    height: 100px;
+    margin-bottom: 20px;
+
+}
+
+.history-content .history-wrapper .history-item .item-title h2, h3, h4 {
+	padding: 4px 0;
+	margin: 0;
+}
+
+.history-content .history-wrapper .history-item .item-content {
+	float: left;
+	padding: 10px 30px 30px 30px;
+	width: 100%;
+	text-align: justify;
+	line-height: 200%;
+}
+
+/*== Bagian Korda Komsat ===================================================================================================*/
+
+.kodasat-content {
+	margin-top:64px;
+	background: #f1f4f9;
+}
+
+.kodasat-content .kodasat-wrapper {
+
+}
+
+.kodasat-content .kodasat-wrapper .kodasat-item {
+	background: white;
+	float: left;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.kodasat-content .kodasat-wrapper .kodasat-item .item-title {
+	float: left;
+	width: calc(100% - 60px);
+	padding: 10px 0 10px 0;
+
+	margin: 0 30px;
+
+	border-bottom: solid #F0F2F4 1px;
+
+	text-align: center;
+}
+
+.kodasat-content .kodasat-wrapper .kodasat-item .item-title .logo {
+	width: 100%;
+	float: left;
+}
+
+.kodasat-content .kodasat-wrapper .kodasat-item .item-title .logo img {
+	display: block;
+    margin: 0 auto;
+    height: 100px;
+    margin-bottom: 20px;
+
+}
+
+.kodasat-content .kodasat-wrapper .kodasat-item .item-title h2, h3, h4 {
+	padding: 4px 0;
+	margin: 0;
+}
+
+.kodasat-content .kodasat-wrapper .kodasat-item .item-content {
+	float: left;
+	padding: 10px 30px 30px 30px;
+	width: 100%;
+	text-align: justify;
+	line-height: 200%;
+}
+
+/*== Bagian Pengurus =======================================================================================================*/
+
+.pengurus-content {
+	margin-top:64px;
+	background: #f1f4f9;
+}
+
+.pengurus-content .pengurus-wrapper {
+
+}
+
+.pengurus-content .pengurus-wrapper .pengurus-item {
+	background: white;
+	float: left;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.pengurus-content .pengurus-wrapper .pengurus-item .item-title {
+	float: left;
+	width: calc(100% - 60px);
+	padding: 10px 0 10px 0;
+
+	margin: 0 30px;
+
+	border-bottom: solid #F0F2F4 1px;
+
+	text-align: center;
+}
+
+.pengurus-content .pengurus-wrapper .pengurus-item .item-title .logo {
+	width: 100%;
+	float: left;
+}
+
+.pengurus-content .pengurus-wrapper .pengurus-item .item-title .logo img {
+	display: block;
+    margin: 0 auto;
+    height: 100px;
+    margin-bottom: 20px;
+
+}
+
+.pengurus-content .pengurus-wrapper .pengurus-item .item-title h2, h3, h4 {
+	padding: 4px 0;
+	margin: 0;
+}
+
+.pengurus-content .pengurus-wrapper .pengurus-item .item-content {
+	float: left;
+	padding: 10px 30px 30px 30px;
+	width: 100%;
+	text-align: justify;
+	line-height: 200%;
+}

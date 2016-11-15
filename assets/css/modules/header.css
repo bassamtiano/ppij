@@ -1,0 +1,118 @@
+@font-face {
+    font-family: "roboto";
+    src: url(../../fonts/RobotoCondensed-Regular.ttf);
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url(../../fonts/RobotoCondensed-Bold.ttf);
+    font-weight: bold;
+}
+
+body {
+	font-family: roboto;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.main-header {;
+	float: right;
+	width: 100%;
+	background: white;
+	position: absolute;
+	top: 0;
+	margin: 0;
+	/*position: fixed;*/
+	z-index: 2;
+	font-size: 14px;
+	// border-bottom: solid #D9CDCA 2px;
+	-webkit-box-shadow: 0px 1px 2px 0px rgba(140,140,140,0.4);
+	-moz-box-shadow: 0px 1px 2px 0px rgba(140,140,140,0.4);
+	box-shadow: 0px 1px 2px 0px rgba(140,140,140,0.4);
+}
+
+.main-header .h-navbar {
+
+}
+
+.main-header .h-navbar .h-banner .subnavbar-wrapper {
+	float: right;
+	margin: 0;
+	padding: 0;
+
+}
+
+.main-header .h-navbar .h-banner .subnavbar-wrapper .btn-subnavbar {
+	// height: 43px;
+	padding: 21px 0 22px 0;
+	width: 135px;
+	text-align: center;
+	color: #494949;
+	float: left;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.main-header .h-navbar .h-banner .subnavbar-wrapper .btn-subnavbar:hover {
+	border-bottom:solid #B64926 2px;
+	padding: 21px 0 20px 0;
+}
+
+.main-header .h-navbar .h-banner .subnavbar-wrapper .btn-subnavbar .menu-item {
+	list-style-type: none;
+	
+	width:100%;
+	float:left;
+}
+
+.main-header .h-navbar .h-banner .subnavbar-wrapper .btn-subnavbar .menu-item .submenu-wrapper {
+	margin:0; 
+	padding: 0;
+	list-style-type:none;
+	position:absolute;
+	float: left;
+	width:300px;
+	text-align:left;
+	margin-top: 23px;
+	
+	height: auto;
+	// background: #494949;
+	background: white;
+
+	
+
+}
+
+.main-header .h-navbar .h-banner .subnavbar-wrapper .btn-subnavbar .menu-item .submenu-wrapper .submenu-wrapper-item {
+	display: none;
+	color: #494949;
+	// display: block;
+	float: left;
+	width: 100%;
+	margin:0;
+	cursor:pointer;
+
+}
+
+.main-header .h-navbar .h-banner .subnavbar-wrapper .btn-subnavbar .menu-item .submenu-wrapper .submenu-wrapper-item a {
+	color: #494949;
+}
+
+.main-header .h-navbar .h-banner .subnavbar-wrapper .btn-subnavbar .menu-item .submenu-wrapper .submenu-wrapper-item .sw-link {
+	padding: 10px;
+	text-decoration: none;
+	float: left;
+	width: 100%;
+}
+
+
+
+.main-header .h-navbar .h-banner .subnavbar-wrapper .btn-subnavbar:hover .menu-item .submenu-wrapper .submenu-wrapper-item {
+	display: block;
+}
+
+.main-header .h-navbar .h-banner .subnavbar-wrapper .btn-subnavbar .menu-item .submenu-wrapper .submenu-wrapper-item:hover {
+	background: #FFF0A5;
+	color:white;
+}
+

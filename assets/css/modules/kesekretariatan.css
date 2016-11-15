@@ -1,0 +1,442 @@
+/*== Bagian AD/ART =========================================================================================================*/
+
+.adart-content {
+	margin-top:64px;
+	background: #f1f4f9;
+}
+
+.adart-content .adart-wrapper {
+
+}
+
+.adart-content .adart-wrapper .adart-item {
+	background: white;
+	float: left;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.adart-content .adart-wrapper .adart-item .item-title {
+	float: left;
+	width: calc(100% - 60px);
+	padding: 10px 0 10px 0;
+
+	margin: 0 30px;
+
+	border-bottom: solid #F0F2F4 1px;
+
+	text-align: center;
+}
+
+.adart-content .adart-wrapper .adart-item .item-title .logo {
+	width: 100%;
+	float: left;
+}
+
+.adart-content .adart-wrapper .adart-item .item-title .logo img {
+	display: block;
+    margin: 0 auto;
+    height: 100px;
+    margin-bottom: 20px;
+
+}
+
+.adart-content .adart-wrapper .adart-item .item-title h2, h3, h4 {
+	padding: 4px 0;
+	margin: 0;
+}
+
+.adart-content .adart-wrapper .adart-item .item-content {
+	float: left;
+	padding: 10px 30px 30px 30px;
+	width: 100%;
+	text-align: justify;
+	line-height: 200%;
+}
+
+/*== Bagian Kalender =======================================================================================================*/
+
+.kalender-content {
+	margin-top:64px;
+
+}
+
+.kalender-content .kalender-bulan {
+	width: 100%;
+	border-bottom: solid #E4E5E7 1px;
+	margin-top:20px;
+}
+
+.kalender-content .kalender-wrapper {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background: #f1f4f9;
+}
+
+.kalender-content .kalender-wrapper .kalender-item {
+	float: left;
+	background: white;
+	width: 100%;
+	border-radius: 4px;
+	margin-top: 20px;
+}
+
+.kalender-content .kalender-wrapper .kalender-item .kalender-date {
+	width: 25%;
+	float: left;
+	text-align: center;
+	background: #BF4031;
+	color: white;
+	position: relative;
+	height: 100%;
+	font-size: 40px;
+	height: 308px;
+}
+
+.kalender-content .kalender-wrapper .kalender-item .kalender-description {
+	float: left;
+	width: 75%;
+}
+
+.kalender-content .kalender-wrapper .kalender-item .kalender-description .desc-title {
+	float: left;
+	width: 100%;
+	padding: 5px 10px;
+	font-size: 20px;
+}
+
+.kalender-content .kalender-wrapper .kalender-item .kalender-description .desc-time {
+	float: left;
+	width: 100%;
+	padding: 0 10px;
+}
+
+.kalender-content .kalender-wrapper .kalender-item .kalender-description .desc-place {
+	float: left;
+	width: calc(100% - 20px);
+	padding: 5px 0;
+	margin: 0 10px;
+	border-bottom: solid #F0F2F4 1px;
+}
+
+.kalender-content .kalender-wrapper .kalender-item .kalender-description .desc-content {
+	padding: 5px 10px;
+	text-align: justify;	
+}
+
+.kalender-content .kalender-wrapper .kalender-item .kalender-description .desc-button {
+	text-align: right;
+	padding: 10px;
+}
+
+/*== Bagian Kegiatan =======================================================================================================*/
+
+
+
+.kegiatan-content {
+	margin-top:64px;
+	background: #f1f4f9;
+}
+
+.kegiatan-content .kegiatan-wrapper {
+
+}
+
+.kegiatan-content .kegiatan-wrapper .kc-item {
+	background: white;
+	float: left;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.kegiatan-content .kegiatan-wrapper .kc-item .item-poster {
+	width: 100%;
+	float: left;
+}
+
+.kegiatan-content .kegiatan-wrapper .kc-item .item-poster img{
+	display: block;
+    margin: 0 auto;
+}
+
+.kegiatan-content .kegiatan-wrapper .kc-item .item-title {
+	float: left;
+	width: calc(100% - 60px);
+	padding: 10px 0 10px 0;
+
+	margin: 0 30px;
+
+	border-bottom: solid #F0F2F4 1px;
+}
+
+.kegiatan-content .kegiatan-wrapper .kc-item .item-title .tw-date {
+	width: 50%;
+	text-align: left;
+	float: left;
+}
+
+
+.kegiatan-content .kegiatan-wrapper .kc-item .item-title .tw-author {
+	text-align: right;
+	width: 50%;
+	float: right;
+}
+
+.kegiatan-content .kegiatan-wrapper .kc-item .item-content {
+	float: left;
+	padding: 10px 30px 30px 30px;
+	width: 100%;
+	text-align: justify;
+	line-height: 200%;
+}
+
+.kegiatan-content .kegiatan-wrapper .kc-item .item-content .content-description {
+	float: left;
+	padding: 10px 30px 15px 10px;
+}
+
+.kegiatan-content .kegiatan-wrapper .kc-item .item-content .content-description .desc-datetime {
+	float: left;
+	width: 100%;
+	text-align: left;
+}
+
+.kegiatan-content .kegiatan-wrapper .kc-item .item-content .content-description .desc-tempat {
+	float: left;
+	width: 100%;
+	text-align: left;
+}
+
+.kegiatan-content .kegiatan-wrapper .kc-item .item-content .content-description .desc-button {
+	float: left;
+	width: 100%;
+	text-align: right;
+}
+
+/*== Bagian Kongres ========================================================================================================*/
+
+.kongres-list {
+	margin-top:64px;
+	
+}
+
+.kongres-list .list-wrapper {
+	background: #f1f4f9;
+}
+
+.kongres-list .list-wrapper .lw-container {
+	// background: white;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.kongres-list .list-wrapper .lw-container .list-item {
+	width: 100%;
+	float: left;
+	background: white;
+	border-radius: 3px;
+	margin-bottom: 20px;
+}
+
+.kongres-list .list-wrapper .lw-container .list-item:hover {
+	background: #F3F3F3;
+	border-radius: 5px;
+}
+
+.kongres-list .list-wrapper .lw-container .list-item .li-img {
+	width: 100%;
+	height: 300px;
+	overflow: hidden;
+	float: left;
+	border-radius: 3px 3px 0 0;
+}
+
+.kongres-list .list-wrapper .lw-container .list-item .li-img {
+
+}
+
+.kongres-list .list-wrapper .lw-container .list-item .li-img .li-img-content {
+	height:300px;
+
+}
+
+.kongres-list .list-wrapper .lw-container .list-item .li-title {
+	margin: 0;
+	line-height: 130%;
+	float: left;
+	width: 100%;
+	padding: 10px 20px 0 20px;
+
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	
+	float: left;
+	height: 100px;
+}
+
+.kongres-list .list-wrapper .lw-container .list-item .li-info {
+	width: calc(100% - 40px);
+	float: left;
+	padding: 0 0 10px 0;
+	margin: 0 20px 10px 20px;
+
+	border-bottom: solid #F0F2F4 1px;
+}
+
+.kongres-list .list-wrapper .lw-container .list-item .li-info .info-module {
+	width: 50%; float: left;
+}
+
+.kongres-list .list-wrapper .lw-container .list-item .li-desc {
+	padding: 10px 20px 10px 20px;
+	text-align: justify;
+}
+
+.kongres-list .list-wrapper .lw-container .list-item .li-button {
+	width: 100%;
+	float: left;
+	padding: 20px 10px 10px 10px;
+	text-align: right;
+}
+
+
+
+/*== Bagian Kongres Konten =================================================================================================*/
+
+
+.kongres-content {
+	margin-top:64px;
+	background: #f1f4f9;
+}
+
+.kongres-content .kongres-wrapper {
+
+}
+
+.kongres-content .kongres-wrapper .kongres-item {
+	background: white;
+	float: left;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.kongres-content .kongres-wrapper .kongres-item .item-title {
+	width: calc(100% - 60px);
+
+	margin: 20px 30px 0 30px;
+
+	float: left;
+
+	border-bottom: solid #F0F2F4 1px;
+}
+
+.kongres-content .kongres-wrapper .kongres-item .item-title h3 {
+	padding: 0;
+	margin: 0;
+}
+
+.kongres-content .kongres-wrapper .kongres-item .item-title .title-wrapper {
+	float: left;
+	width: 100%;
+	padding: 10px 0 10px 0;
+}
+
+.kongres-content .kongres-wrapper .kongres-item .item-title .title-wrapper .tw-date {
+	width: 50%;
+	text-align: left;
+	float: left;
+
+}
+
+.kongres-content .kongres-wrapper .kongres-item .item-title .title-wrapper .tw-author {
+	text-align: right;
+	width: 50%;
+	float: right;
+}
+
+
+.kongres-content .kongres-wrapper .kongres-item .item-content {
+	float: left;
+	padding: 10px 30px 30px 30px;
+	width: 100%;
+	text-align: justify;
+	line-height: 200%;
+}
+
+/*== otsukaresama List ===========================================================================================================*/
+/*==========================================================================================================================*/
+
+.otsukaresama-list {
+	margin-top:64px;
+	
+}
+
+.otsukaresama-list .list-wrapper {
+	background: #f1f4f9;
+}
+
+.otsukaresama-list .list-wrapper .lw-container {
+	// background: white;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.otsukaresama-list .list-wrapper .lw-container .list-item {
+	width: 100%;
+	float: left;
+	background: white;
+	border-radius: 3px;
+	margin-bottom: 20px;
+}
+
+.otsukaresama-list .list-wrapper .lw-container .list-item:hover {
+	background: #F3F3F3;
+	border-radius: 5px;
+}
+
+.otsukaresama-list .list-wrapper .lw-container .list-item .li-img {
+	width: 100%;
+	height: 300px;
+	overflow: hidden;
+	float: left;
+	border-radius: 3px 3px 0 0;
+}
+
+.otsukaresama-list .list-wrapper .lw-container .list-item .li-img {
+
+}
+
+.otsukaresama-list .list-wrapper .lw-container .list-item .li-img .li-clip {
+	background: #B64926; position: absolute; top:0; padding: 5px 10px 5px 10px; color: white;	
+}
+
+.otsukaresama-list .list-wrapper .lw-container .list-item .li-img .li-img-content {
+	height:300px;
+
+}
+
+.otsukaresama-list .list-wrapper .lw-container .list-item .li-title {
+	margin: 0;
+	line-height: 130%;
+	float: left;
+	width: calc(100% - 40px);
+	padding: 10px 0 0 0;
+	margin: 0 20px;
+
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	
+	float: left;
+	height: 70px;
+
+	border-bottom: solid #F0F2F4 1px;
+}
+
+.otsukaresama-list .list-wrapper .lw-container .list-item .li-button {
+	width: 100%;
+	float: left;
+	padding: 20px 10px 10px 10px;
+	text-align: right;
+}
