@@ -11,8 +11,10 @@
     <link rel="stylesheet" type="text/css" href=" <?php echo base_url('assets/css/bootstrap.min.css') ?> ">
     <link rel="stylesheet" type="text/css" href=" <?php echo base_url('assets/css/font-awesome.min.css') ?> ">
 
-    <link rel="stylesheet" type="text/css" href=" <?php echo base_url('assets/css/AdminLTE.min.css') ?> ">
-    <link rel="stylesheet" type="text/css" href=" <?php echo base_url('assets/css/skins/_all-skins.min.css') ?> ">
+    <link rel="stylesheet" type="text/css" href=" <?php echo base_url('assets/css/select2.min.css') ?> " />
+
+    <link rel="stylesheet" type="text/css" href=" <?php echo base_url('assets/css/AdminLTE.min.css') ?> " />
+    <link rel="stylesheet" type="text/css" href=" <?php echo base_url('assets/css/skins/_all-skins.min.css') ?> " />
 
 </head>
 <body class="hold-transition skin-blue sidebar-mini" style="margin:0; padding:0;">
@@ -21,24 +23,32 @@
 
         <?php $this->load->view('modules/header') ?>
 
-        <?php $this->load->view('modules/sidebar') ?>
+        <?php echo $sidebar; ?>
 
+        <?php echo $content; ?>
 
-        <div class="content-wrapper">
+        <?php $this->load->view('modules/footer') ?>
 
-
-        </div>
-
-        <?php $this->load->view('modules/footer') ?>      
-
+        <!-- <?php echo $modals; ?> -->
 
     </div><!-- ./wrapper -->
 
     <script type="text/javascript" src="<?php echo base_url('assets/js/jquery.min.js'); ?>"></script>
     <script type="text/javascript" src="<?php echo base_url('assets/js/jquery-ui.min.js'); ?>"></script>
 
+    <script type="text/javascript" src="<?php echo base_url('assets/js/select2.full.min.js'); ?>"></script>
     <script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.min.js'); ?>"></script>
+
+    <script src="https://cdn.ckeditor.com/4.4.3/standard/ckeditor.js"></script>
     <script type="text/javascript" src="<?php echo base_url('assets/js/adminlte.min.js'); ?>"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            CKEDITOR.replace('editor1');
+            $(".select2").select2();
+        });
+    </script>
+
 
 </body>
 </html>

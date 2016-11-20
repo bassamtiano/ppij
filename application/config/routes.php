@@ -52,3 +52,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'main';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+$route['jurnal/(:any)'] = 'jurnal/kategori/$1';
+$route['jurnal/(:any)/(:any)/(:any)/(:any)/(:any)'] = 'jurnal/artikel/$1/$2/$3/$4/$5';
+
+$route['panduanstudi/beasiswa/(:any)'] = 'panduanstudi/beasiswa_konten/$1';
+
+$route['kesekretariatan/kalender/(:any)/(:any)/(:any)/(:any)'] = 'kesekretariatan/kegiatan/$1/$2/$3/$4';

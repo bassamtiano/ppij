@@ -22,6 +22,26 @@
 	
 }
 
+.panduanstudi-content .psc-item .psci-content .content-title .logo {
+	width: 100%;
+	float: left;
+}
+
+.panduanstudi-content .psc-item .psci-content .content-title .logo img {
+	display: block;
+    margin: 0 auto;
+    height: 100px;
+    margin-bottom: 20px;
+
+}
+
+.panduanstudi-content .psc-item .psci-content .content-title h2, h3, h4 {
+	padding: 4px 0;
+	margin: 0;
+	width: 100%;
+	text-align: center;
+}
+
 .panduanstudi-content .psc-item .psci-content .content-item {
 	margin-top:30px;
 }

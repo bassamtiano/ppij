@@ -13,328 +13,102 @@
 		<div class="col-md-10 col-md-offset-1 ">
 
 			<div class="row">
-				<div class="col-md-12 kalender-bulan">
-					<h1>Januari</h1>
-				</div>
 
-				<div class="col-md-3">
-					<div class="kalender-item">
-						<div class="kalender-date">
-							31
+			<?php 
+
+			$counter = 0;
+
+				foreach ($content as $ckey => $cval) { 
+				$tanggal = date('d', strtotime($cval->tanggal));
+				$bulan = date('m', strtotime($cval->tanggal));
+				$tahun = date('Y', strtotime($cval->tanggal));
+
+			?>
+
+				
+
+			
+
+				<?php 
+					if($bulan != $counter) {
+						$counter = $bulan;
+				?>
+						<div class="col-md-12 kalender-bulan">
+							<h1>
+								<?php echo date('F', strtotime($cval->tanggal))?>
+							</h1>
 						</div>
 
-						<div class="kalender-description">
-							<div class="desc-title">
-								Event
-							</div>
-							<div class="desc-time">
-								08:00 - 13:00
-							</div>
-							<div class="desc-place">
-								Place
-							</div>
-							<div class="desc-content">
-								Lorem ipsum dolor sit amet, eu vis explicari definitiones. Sit ea ipsum populo inciderint, ei mel tamquam argumentum reprehendunt. Cum eu deleniti voluptua, pri ex iisque atomorum intellegat, elit mundi tantas ex qui. Ei quas molestie suscipit mel, ne quod persecuti eos. Ex qui mucius pertinax, et nibh adipisci duo.
-							</div>
-							<div class="desc-button">
-								<a class="btn btn-primary" href="">POSTER</a>
-								<a class="btn btn-success" href="">SELENGKAPNYA</a>
+						<div class="col-md-3">
+							<div class="kalender-item">
+								<div class="kalender-date">
+									<?php echo $tanggal; ?>
+								</div>
+
+								<div class="kalender-description">
+									<div class="desc-title">
+										<?php echo $cval->nama; ?>
+									</div>
+									<div class="desc-time">
+										<?php echo '<b>' . date('d F Y', strtotime($cval->tanggal)) . '</b>, ' . date('H:i', strtotime($cval->waktu_mulai)) . ' - ' . date('H:i', strtotime($cval->waktu_selesai)) ; ?>
+									</div>
+									<div class="desc-place">
+										<?php echo $cval->tempat ?>
+									</div>
+									<div class="desc-content">
+										<?php echo $cval->konten ?>
+									</div>
+									<div class="desc-button">
+										<a class="btn btn-primary" href="">POSTER</a>
+										<a class="btn btn-success" href=" <?php echo base_url() . '/index.php/kesekretariatan/kalender/' . $tahun . '/' . $bulan . '/' . $tanggal . '/' . $cval->id; ?> ">SELENGKAPNYA</a>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>
-				</div>
 
-				<div class="col-md-3">
-					
-					<div class="kalender-item">
-						<div class="kalender-date">
-							31
+				
+
+				<?php 
+					}
+
+					else {
+				?>
+
+						<div class="col-md-3">
+							<div class="kalender-item">
+								<div class="kalender-date">
+									<?php echo $tanggal; ?>
+								</div>
+
+								<div class="kalender-description">
+									<div class="desc-title">
+										<?php echo $cval->nama; ?>
+									</div>
+									<div class="desc-time">
+										<?php echo '<b>' . date('d F Y', strtotime($cval->tanggal)) . '</b>, ' . date('H:i', strtotime($cval->waktu_mulai)) . ' - ' . date('H:i', strtotime($cval->waktu_selesai)) ; ?>
+									</div>
+									<div class="desc-place">
+										<?php echo $cval->tempat ?>
+									</div>
+									<div class="desc-content">
+										<?php echo $cval->konten ?>
+									</div>
+									<div class="desc-button">
+										<a class="btn btn-primary" href="">POSTER</a>
+										<a class="btn btn-success" href=" <?php echo base_url() . '/index.php/kesekretariatan/kalender/' . $tahun . '/' . $bulan . '/' . $tanggal . '/' . $cval->id; ?> ">SELENGKAPNYA</a>
+									</div>
+								</div>
+							</div>
 						</div>
 
-						<div class="kalender-description">
-							
-							<div class="desc-title">
-								Event
-							</div>
-							<div class="desc-time">
-								08:00 - 13:00
-							</div>
-							<div class="desc-place">
-								Place
-							</div>
-							<div class="desc-content">
-								Lorem ipsum dolor sit amet, eu vis explicari definitiones. Sit ea ipsum populo inciderint, ei mel tamquam argumentum reprehendunt. Cum eu deleniti voluptua, pri ex iisque atomorum intellegat, elit mundi tantas ex qui. Ei quas molestie suscipit mel, ne quod persecuti eos. Ex qui mucius pertinax, et nibh adipisci duo.
-							</div>
-							<div class="desc-button">
-								<a class="btn btn-primary" href="">POSTER</a>
-								<a class="btn btn-success" href="">SELENGKAPNYA</a>
-							</div>
+				<?php } ?>
 
-						</div>
+			
 
-					</div>
 
-				</div>
+			<?php } ?>
 
-				<div class="col-md-3">
-					
-					<div class="kalender-item">
-						<div class="kalender-date">
-							31
-						</div>
-
-						<div class="kalender-description">
-							
-							<div class="desc-title">
-								Event
-							</div>
-							<div class="desc-time">
-								08:00 - 13:00
-							</div>
-							<div class="desc-place">
-								Place
-							</div>
-							<div class="desc-content">
-								Lorem ipsum dolor sit amet, eu vis explicari definitiones. Sit ea ipsum populo inciderint, ei mel tamquam argumentum reprehendunt. Cum eu deleniti voluptua, pri ex iisque atomorum intellegat, elit mundi tantas ex qui. Ei quas molestie suscipit mel, ne quod persecuti eos. Ex qui mucius pertinax, et nibh adipisci duo.
-							</div>
-							<div class="desc-button">
-								<a class="btn btn-primary" href="">POSTER</a>
-								<a class="btn btn-success" href="">SELENGKAPNYA</a>
-							</div>
-
-						</div>
-
-					</div>
-
-				</div>
-
-				<div class="col-md-3">
-					
-					<div class="kalender-item">
-						<div class="kalender-date">
-							31
-						</div>
-
-						<div class="kalender-description">
-							
-							<div class="desc-title">
-								Event
-							</div>
-							<div class="desc-time">
-								08:00 - 13:00
-							</div>
-							<div class="desc-place">
-								Place
-							</div>
-							<div class="desc-content">
-								Lorem ipsum dolor sit amet, eu vis explicari definitiones. Sit ea ipsum populo inciderint, ei mel tamquam argumentum reprehendunt. Cum eu deleniti voluptua, pri ex iisque atomorum intellegat, elit mundi tantas ex qui. Ei quas molestie suscipit mel, ne quod persecuti eos. Ex qui mucius pertinax, et nibh adipisci duo.
-							</div>
-							<div class="desc-button">
-								<a class="btn btn-primary" href="">POSTER</a>
-								<a class="btn btn-success" href="">SELENGKAPNYA</a>
-							</div>
-
-						</div>
-
-					</div>
-
-				</div>
-
-				<div class="col-md-3">
-					
-					<div class="kalender-item">
-						<div class="kalender-date">
-							31
-						</div>
-
-						<div class="kalender-description">
-							
-							<div class="desc-title">
-								Event
-							</div>
-							<div class="desc-time">
-								08:00 - 13:00
-							</div>
-							<div class="desc-place">
-								Place
-							</div>
-							<div class="desc-content">
-								Lorem ipsum dolor sit amet, eu vis explicari definitiones. Sit ea ipsum populo inciderint, ei mel tamquam argumentum reprehendunt. Cum eu deleniti voluptua, pri ex iisque atomorum intellegat, elit mundi tantas ex qui. Ei quas molestie suscipit mel, ne quod persecuti eos. Ex qui mucius pertinax, et nibh adipisci duo.
-							</div>
-							<div class="desc-button">
-								<a class="btn btn-primary" href="">POSTER</a>
-								<a class="btn btn-success" href="">SELENGKAPNYA</a>
-							</div>
-
-						</div>
-
-					</div>
-
-				</div>
 			</div>
-
-			<div class="row">
-				<div class="col-md-12 kalender-bulan">
-					<h1>Februari</h1>
-				</div>
-
-				<div class="col-md-3">
-					<div class="kalender-item">
-						<div class="kalender-date">
-							31
-						</div>
-
-						<div class="kalender-description">
-							<div class="desc-title">
-								Event
-							</div>
-							<div class="desc-time">
-								08:00 - 13:00
-							</div>
-							<div class="desc-place">
-								Place
-							</div>
-							<div class="desc-content">
-								Lorem ipsum dolor sit amet, eu vis explicari definitiones. Sit ea ipsum populo inciderint, ei mel tamquam argumentum reprehendunt. Cum eu deleniti voluptua, pri ex iisque atomorum intellegat, elit mundi tantas ex qui. Ei quas molestie suscipit mel, ne quod persecuti eos. Ex qui mucius pertinax, et nibh adipisci duo.
-							</div>
-							<div class="desc-button">
-								<a class="btn btn-primary" href="">POSTER</a>
-								<a class="btn btn-success" href="">SELENGKAPNYA</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-3">
-					
-					<div class="kalender-item">
-						<div class="kalender-date">
-							31
-						</div>
-
-						<div class="kalender-description">
-							
-							<div class="desc-title">
-								Event
-							</div>
-							<div class="desc-time">
-								08:00 - 13:00
-							</div>
-							<div class="desc-place">
-								Place
-							</div>
-							<div class="desc-content">
-								Lorem ipsum dolor sit amet, eu vis explicari definitiones. Sit ea ipsum populo inciderint, ei mel tamquam argumentum reprehendunt. Cum eu deleniti voluptua, pri ex iisque atomorum intellegat, elit mundi tantas ex qui. Ei quas molestie suscipit mel, ne quod persecuti eos. Ex qui mucius pertinax, et nibh adipisci duo.
-							</div>
-							<div class="desc-button">
-								<a class="btn btn-primary" href="">POSTER</a>
-								<a class="btn btn-success" href="">SELENGKAPNYA</a>
-							</div>
-
-						</div>
-
-					</div>
-
-				</div>
-
-				<div class="col-md-3">
-					
-					<div class="kalender-item">
-						<div class="kalender-date">
-							31
-						</div>
-
-						<div class="kalender-description">
-							
-							<div class="desc-title">
-								Event
-							</div>
-							<div class="desc-time">
-								08:00 - 13:00
-							</div>
-							<div class="desc-place">
-								Place
-							</div>
-							<div class="desc-content">
-								Lorem ipsum dolor sit amet, eu vis explicari definitiones. Sit ea ipsum populo inciderint, ei mel tamquam argumentum reprehendunt. Cum eu deleniti voluptua, pri ex iisque atomorum intellegat, elit mundi tantas ex qui. Ei quas molestie suscipit mel, ne quod persecuti eos. Ex qui mucius pertinax, et nibh adipisci duo.
-							</div>
-							<div class="desc-button">
-								<a class="btn btn-primary" href="">POSTER</a>
-								<a class="btn btn-success" href="">SELENGKAPNYA</a>
-							</div>
-
-						</div>
-
-					</div>
-
-				</div>
-
-				<div class="col-md-3">
-					
-					<div class="kalender-item">
-						<div class="kalender-date">
-							31
-						</div>
-
-						<div class="kalender-description">
-							
-							<div class="desc-title">
-								Event
-							</div>
-							<div class="desc-time">
-								08:00 - 13:00
-							</div>
-							<div class="desc-place">
-								Place
-							</div>
-							<div class="desc-content">
-								Lorem ipsum dolor sit amet, eu vis explicari definitiones. Sit ea ipsum populo inciderint, ei mel tamquam argumentum reprehendunt. Cum eu deleniti voluptua, pri ex iisque atomorum intellegat, elit mundi tantas ex qui. Ei quas molestie suscipit mel, ne quod persecuti eos. Ex qui mucius pertinax, et nibh adipisci duo.
-							</div>
-							<div class="desc-button">
-								<a class="btn btn-primary" href="">POSTER</a>
-								<a class="btn btn-success" href="">SELENGKAPNYA</a>
-							</div>
-
-						</div>
-
-					</div>
-
-				</div>
-
-				<div class="col-md-3">
-					
-					<div class="kalender-item">
-						<div class="kalender-date">
-							31
-						</div>
-
-						<div class="kalender-description">
-							
-							<div class="desc-title">
-								Event
-							</div>
-							<div class="desc-time">
-								08:00 - 13:00
-							</div>
-							<div class="desc-place">
-								Place
-							</div>
-							<div class="desc-content">
-								Lorem ipsum dolor sit amet, eu vis explicari definitiones. Sit ea ipsum populo inciderint, ei mel tamquam argumentum reprehendunt. Cum eu deleniti voluptua, pri ex iisque atomorum intellegat, elit mundi tantas ex qui. Ei quas molestie suscipit mel, ne quod persecuti eos. Ex qui mucius pertinax, et nibh adipisci duo.
-							</div>
-							<div class="desc-button">
-								<a class="btn btn-primary" href="">POSTER</a>
-								<a class="btn btn-success" href="">SELENGKAPNYA</a>
-							</div>
-
-						</div>
-
-					</div>
-
-				</div>
-			</div>
-
-
 
 		</div>
 		

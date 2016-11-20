@@ -71,21 +71,21 @@
 		                	<ul class="submenu-wrapper">
 		                	
 	                			<li class="submenu-wrapper-item">
-	                				<a class="sw-link" href="<?php echo $header_url . '/ourevent/socialandculture' ?>" >
+	                				<a class="sw-link" href="<?php echo $header_url . '/jurnal/acara' ?>" >
 		                				<i class="icon fa fa-circle-o" style="margin-right: 5px;"></i>
 		                				Acara
 	                				</a>
 	                			</li>
 
 	                			<li class="submenu-wrapper-item">
-	                				<a class="sw-link" href="<?php echo $header_url . '/ourevent/education' ?>" >
+	                				<a class="sw-link" href="<?php echo $header_url . '/jurnal/hidup_di_jepang' ?>" >
 	                					<i class="icon fa fa-circle-o" style="margin-right: 5px;"></i>
 	                					Hidup di Jepang
 	                				</a>
 	                			</li>
 
 	                			<li class="submenu-wrapper-item">
-	                				<a class="sw-link" href="<?php echo $header_url . '/ourevent/businessandeconomy' ?>" >
+	                				<a class="sw-link" href="<?php echo $header_url . '/jurnal/pernyataan_sikap' ?>" >
 	                					<i class="icon fa fa-circle-o" style="margin-right: 5px;"></i>
 	                					Pernyataan Sikap
 	                				</a>

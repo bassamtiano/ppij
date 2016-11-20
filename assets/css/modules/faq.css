@@ -13,7 +13,8 @@
 	background: white;
 	float: left;
 	margin-top: 20px;
-	margin-bottom: 20px;
+ 	margin-bottom: 20px;
+ 	width: 100%;
 }
 
 .faq-content .faq-wrapper .fw-item .jwi-category {
@@ -23,6 +24,8 @@
 .faq-content .faq-wrapper .fw-item .jwi-category .category-title {
 	background: #B64926; float: left; padding: 5px 10px 5px 10px; color: white;
 }
+
+
 
 .faq-content .faq-wrapper .fw-item .fwi-title {
 	width: calc(100% - 60px);
@@ -34,29 +37,36 @@
 	border-bottom: solid #F0F2F4 1px;
 }
 
-.faq-content .faq-wrapper .fw-item .fwi-title h3 {
-	padding: 0;
+.faq-content .faq-wrapper .fw-item .fwi-title .item-title {
+	float: left;
+	width: calc(100% - 60px);
+	padding: 10px 0 10px 0;
+
+	margin: 0 30px;
+
+	border-bottom: solid #F0F2F4 1px;
+
+	text-align: center;
+}
+
+.faq-content .faq-wrapper .fw-item .fwi-title .item-title .logo {
+	width: 100%;
+	float: left;
+}
+
+.faq-content .faq-wrapper .fw-item .fwi-title .item-title .logo img {
+	display: block;
+    margin: 0 auto;
+    height: 100px;
+    margin-bottom: 20px;
+
+}
+
+.faq-content .faq-wrapper .fw-item .fwi-title .item-title h2, h3, h4 {
+	padding: 4px 0;
 	margin: 0;
 }
 
-.faq-content .faq-wrapper .fw-item .fwi-title .title-wrapper {
-	float: left;
-	width: 100%;
-	padding: 10px 0 10px 0;
-}
-
-.faq-content .faq-wrapper .fw-item .fwi-title .title-wrapper .tw-date {
-	width: 50%;
-	text-align: left;
-	float: left;
-
-}
-
-.faq-content .faq-wrapper .fw-item .fwi-title .title-wrapper .tw-author {
-	text-align: right;
-	width: 50%;
-	float: right;
-}
 
 
 .faq-content .faq-wrapper .fw-item .fwi-content {

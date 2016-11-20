@@ -14,6 +14,8 @@
 	float: left;
 	margin-top: 20px;
 	margin-bottom: 20px;
+	width: 100%;
+
 }
 
 .history-content .history-wrapper .history-item .item-title {
@@ -70,6 +72,7 @@
 	float: left;
 	margin-top: 20px;
 	margin-bottom: 20px;
+	width: 100%;
 }
 
 .kodasat-content .kodasat-wrapper .kodasat-item .item-title {
@@ -126,6 +129,7 @@
 	float: left;
 	margin-top: 20px;
 	margin-bottom: 20px;
+	width: 100%;
 }
 
 .pengurus-content .pengurus-wrapper .pengurus-item .item-title {

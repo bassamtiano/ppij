@@ -9,28 +9,48 @@
 				<div class="psci-content">
 
 					<div class="content-title">
-						<h3>Panduan Kuliah di Jepang</h3>
+						<div class="logo">
+							<img src=" <?php echo base_url() . 'assets/img/ppij-logo.svg' ?> " />
+						</div>
 
-						<p>Apakah Kamu ingin Kuliah di Jepang, Berikut ini panduannya.</p>	
+						<h2>
+							<b>
+								Panduan Studi di Jepang
+							</b>
+						</h2>	
+
+						<h3>Apakah Kamu ingin Kuliah di Jepang, Berikut ini panduannya.</h3>
+
+						
+
 					</div>
 
 					<div class="content-item">
 						<!-- Nav tabs -->
 						<ul class="nav nav-tabs" role="tablist">
-							<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Pra Kuliah</a></li>
-							<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Sebelum Keberangkatan</a></li>
-							<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Saat di Jepang</a></li>
-							<li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Membawa Keluarga</a></li>
+
+							<?php foreach ($data as $dkey => $dval) { ?>
+									
+								<li role="presentation" class="<?php if ($dval->step == 1) echo 'active'; ?>">
+									<a href="#<?php echo str_replace(' ', '_', strtolower($dval->title)); ?>" aria-controls="<?php echo str_replace(' ', '_', strtolower($dval->title)); ?>" role="tab" data-toggle="tab">
+										<?php echo $dval->title ?>
+									</a>
+								</li>
+							
+							<?php } ?>
 						</ul>
 
 						<!-- Tab panes -->
 						<div class="tab-content">
-							<div role="tabpanel" class="tab-pane active" id="home">
-								A
-							</div>
-							<div role="tabpanel" class="tab-pane" id="profile">B</div>
-							<div role="tabpanel" class="tab-pane" id="messages">C</div>
-							<div role="tabpanel" class="tab-pane" id="settings">D</div>
+							<?php foreach ($data as $dkey => $dval) { ?>
+
+								<div role="tabpanel" class="tab-pane <?php if ($dval->step == 1) echo 'active'; ?>" id="<?php echo str_replace(' ', '_', strtolower($dval->title)); ?>">
+									<div style=" margin: 15px 0; padding: 0 15px;">
+										<?php echo $dval->content ?>	
+									</div>
+								</div>
+							
+							<?php } ?>
 						</div>
 
 					</div>

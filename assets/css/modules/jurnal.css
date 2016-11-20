@@ -24,6 +24,12 @@
     padding-top: 10px;
     padding-bottom: 10px;
 	text-align: center;
+	width: 100%;
+}
+
+.jurnal-menu .jurnal-menu-wrapper .jm-item.active a {
+	font-weight: bold;
+	color: red;
 }
 
 /*== Bagian Content Wrapper ================================================================================================*/
@@ -42,6 +48,7 @@
 	float: left;
 	margin-top: 20px;
 	margin-bottom: 20px;
+	width: 100%;
 }
 
 .jurnal-content .jurnal-wrapper .jw-item .jwi-category {
@@ -111,6 +118,7 @@
 	// background: white;
 	margin-top: 20px;
 	margin-bottom: 20px;
+	
 }
 
 .jurnal-list .list-wrapper .lw-container .list-item {

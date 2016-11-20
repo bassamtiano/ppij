@@ -4,7 +4,7 @@
             <section class="content-header">
                 <h1>
                     Dashboard
-                    <small>Kategori Jurnal</small>
+                    <small>Aktifitas Diaspora</small>
                 </h1>
                 <ol class="breadcrumb">
                     <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
@@ -34,7 +34,10 @@
                                     <thead>
                                         <tr>
                                             <th>ID</th>
+                                            <th>Tanggal Post</th>
                                             <th>Kategori</th>
+                                            <th>Judul</th>
+                                            <th>Thumbnail</th>
                                             <th>Tools</th>
                                         </tr>
                                     </thead>
@@ -42,22 +45,25 @@
                                         
                                         <?php
 
-                                            $kcount = 1;
+                                            $jcount = 1;
 
-                                            foreach ($kategori as $kkey => $kval) {
+                                            foreach ($jurnal as $jkey => $jval) {
                                                 echo '<tr>';
-                                                    echo '<td>' . $kcount . '</td>';
-                                                    echo '<td>' . $kval->kategori . '</td>';
+                                                    echo '<td>' . $jcount . '</td>';
+                                                    echo '<td>' . $jval->jurnal_date . '</td>';
+                                                    echo '<td>' . $jval->kategori_jurnal . '</td>';
+                                                    echo '<td>' . $jval->jurnal_title . '</td>';
+                                                    echo '<td>' . $jval->thumbnail . '</td>';
                                                     echo '<td>';
-                                                        echo '<a href="' . $admin_url . '/aktifitas/edit?id=' . $kval->id . '" class="btn btn-warning">Edit</a>';
+                                                        echo '<a href="' . $admin_url . '/aktifitas/edit?id=' . $jval->id . '" class="btn btn-warning">Edit</a>';
                                                         ?>
-                                                            <a href="" data-toggle="modal" data-target="#modal_remove" class="btn btn-danger" onclick="modal_delete('<?php echo $kval->kategori ?>',' <?php echo $kval->id ?>')">Delete</a>
+                                                            <a href="" data-toggle="modal" data-target="#modal_remove" class="btn btn-danger" onclick="modal_delete('<?php echo $jval->jurnal_title ?>',' <?php echo $jval->id ?>')">Delete</a>
                                                         <?php
                                                         
                                                     echo '</td>';
                                                 echo '</tr>';
 
-                                                $kcount += 1;
+                                                $jcount += 1;
                                             }
                                         ?>
 
@@ -65,7 +71,10 @@
                                     <tfoot>
                                         <tr>
                                             <th>ID</th>
+                                            <th>Tanggal Post</th>
                                             <th>Kategori</th>
+                                            <th>Judul</th>
+                                            <th>Thumbnail</th>
                                             <th>Tools</th>
                                         </tr>
                                     </tfoot>

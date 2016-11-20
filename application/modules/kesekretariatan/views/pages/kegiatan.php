@@ -7,10 +7,12 @@
 				</div>
 				
 				<div class="item-title">
-					<h3>Judul Kegiatan</h3>	
+					<h3>
+						<?php echo $data->nama; ?>
+					</h3>	
 					<div class="title-wrapper">
 						<span class="tw-date">
-							1 Januari 2019
+							<?php echo date('d F Y', strtotime($data->created_at)) ?>
 						</span>
 						<span class="tw-author">
 							Oleh <b>Admin</b>
@@ -27,11 +29,11 @@
 						</div>
 						<div class="desc-datetiem">
 							<b>Tanggal & Waktu : </b>
-							<b>10 Januari 2017,</b> 08:00 - 12:00
+							<b><?php echo date('d F Y', strtotime($data->tanggal)) ?>,</b> <?php echo date('H:i', strtotime($data->waktu_mulai)) . ' - ' . date('H:i', strtotime($data->waktu_selesai)) ?>
 						</div>
 						<div class="desc-tempat">
 							<b>Tempat : </b>
-							Place
+							<?php echo $data->tempat ?>
 						</div>
 						<div class="desc-button">
 							<a class="btn btn-primary" href="">POSTER</a>
