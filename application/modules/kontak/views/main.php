@@ -7,7 +7,7 @@
 		$this->load->view('common_modules/script');
 	?>
 
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url() . 'assets/css/modules/faq.css'; ?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url() . 'assets/css/modules/kontak.css'; ?>">
 
 </head>
 <body>

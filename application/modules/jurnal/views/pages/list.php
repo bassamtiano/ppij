@@ -17,7 +17,7 @@
 								<?php echo $dval->kategori; ?>
 							</span>
 							
-							<div class="li-img-content" style="background:url(<?php echo base_url('files/pictures/' . $dval->thumbnail) ?>) center center; background-size:cover; "></div>
+							<div class="li-img-content" style="background:url(<?php echo base_url('files/jurnal/thumbnail/' . $dval->thumbnail) ?>) center center; background-size:cover; "></div>
 
 						</div>
 						<h3 class="li-title">
@@ -32,7 +32,11 @@
 							</span>
 						</div>
 						<div class="li-desc">
-							<?php echo $dval->content; ?>
+							<?php 
+								$content = $dval->content;
+								$content = preg_replace("/<img[^>]+\>/i", "", $content); 
+		    					echo $content;
+							?>
 						</div>
 						<div class="li-button">
 							<a href="<?php echo base_url() . '/index.php/jurnal/' . str_replace(' ', '_', $dval->kategori) . '/' . $date['year'] . '/' . $date['month'] . '/' . $date['day'] . '/' . $dval->id  ?>" class="btn btn-success">

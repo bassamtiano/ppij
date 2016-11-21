@@ -18,9 +18,7 @@
 				</div>
 				
 				<div class="item-content">
-					
 					<?php echo $content->content ?>
-
 				</div>
 			</div>
 		</div>

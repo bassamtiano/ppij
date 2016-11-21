@@ -28,6 +28,20 @@
 			return $data;
 		}
 
+		public function select_jurnal($id, $column) {
+			if($column != NULL || $column != '') {
+				$this->db->select($column);
+			}
+			$this->db->from('jurnal');
+			$this->db->where('jurnal.id', $id);
+			$query = $this->db->get();
+			if ($query->num_rows() > 0)
+				foreach ($query->result() as $row) $data[] = $row;
+			else
+				$data = [];
+			return $data[0];
+		}
+
 		public function get_jurnal($column) {
 			if($column != NULL || $column != '') {
 				$this->db->select($column);
@@ -49,6 +63,8 @@
 			$query = $this->db->get();
 			if ($query->num_rows() > 0)
 				foreach ($query->result() as $row) $data[] = $row;
+			else
+				$data = [];
 			return $data;
 		}
 

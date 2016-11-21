@@ -31,14 +31,20 @@
             </a>
         </li>
 
+        <li>
+            <a href="<?php echo $admin_url . '/slideshow' ?>">
+                <i class="fa fa-picture-o"></i> <span>Slide Show</span>
+            </a>
+        </li>
+
         <li class="treeview">
             <a href=" <?php echo $admin_url ?> ">
                 <i class="fa fa-info-circle"></i> <span>About</span> <i class="fa fa-angle-left pull-right"></i>
             </a>
             <ul class="treeview-menu">
-                <li class="active"><a href="<?php echo $admin_url . '/banner' ?>"><i class="fa fa-circle-o"></i>History</a></li>
-                <li><a href="<?php echo $admin_url . '/aktifitas' ?>"><i class="fa fa-circle-o"></i>Pengurus</a></li>
-                <li><a href="<?php echo $admin_url . '/aktifitas' ?>"><i class="fa fa-circle-o"></i>Korda Komsat</a></li>
+                <li class="active"><a href="<?php echo $admin_url . '/about/history' ?>"><i class="fa fa-circle-o"></i>History</a></li>
+                <li><a href="<?php echo $admin_url . '/about/pengurus' ?>"><i class="fa fa-circle-o"></i>Pengurus</a></li>
+                <li><a href="<?php echo $admin_url . '/about/korda_komsat' ?>"><i class="fa fa-circle-o"></i>Korda Komsat</a></li>
             </ul>
         </li>
 
@@ -47,8 +53,8 @@
                 <i class="fa fa-pencil-square"></i> <span>Jurnal</span> <i class="fa fa-angle-left pull-right"></i>
             </a>
             <ul class="treeview-menu">
-                <li class="active"><a href="<?php echo $admin_url . '/banner' ?>"><i class="fa fa-circle-o"></i> Kategori Jurnal</a></li>
-                <li><a href="<?php echo $admin_url . '/aktifitas' ?>"><i class="fa fa-circle-o"></i> Konten Jurnal </a></li>
+                <li class="active"><a href="<?php echo $admin_url . '/jurnal/kategori' ?>"><i class="fa fa-circle-o"></i> Kategori Jurnal</a></li>
+                <li><a href="<?php echo $admin_url . '/jurnal/konten' ?>"><i class="fa fa-circle-o"></i> Konten Jurnal </a></li>
             </ul>
         </li>
         
@@ -60,8 +66,8 @@
                 <i class="fa fa-angle-left pull-right"></i>
             </a>
             <ul class="treeview-menu">
-                <li><a href="<?php echo $admin_url . '/socialculture' ?>"><i class="fa fa-circle-o"></i>Kuliah di Jepang</a></li>
-                <li><a href="<?php echo $admin_url . '/education' ?>"><i class="fa fa-circle-o"></i> Beasiswa </a></li>
+                <li><a href="<?php echo $admin_url . '/panduanstudi/beasiswa' ?>"><i class="fa fa-circle-o"></i>Kuliah di Jepang</a></li>
+                <li><a href="<?php echo $admin_url . '/panduanstudi/kuliahdijepang' ?>"><i class="fa fa-circle-o"></i> Beasiswa </a></li>
                 
             </ul>
         </li>
@@ -73,22 +79,28 @@
                 <i class="fa fa-angle-left pull-right"></i>
             </a>
             <ul class="treeview-menu">
-                <li><a href="<?php echo $admin_url . '/album' ?>"><i class="fa fa-circle-o"></i> ADRT </a></li>
-                <li><a href="<?php echo $admin_url . '/picture' ?>"><i class="fa fa-circle-o"></i> Kongres </a></li>
-                <li><a href="<?php echo $admin_url . '/video' ?>"><i class="fa fa-circle-o"></i> Otsukaresama </a></li>
-                <li><a href="<?php echo $admin_url . '/video' ?>"><i class="fa fa-circle-o"></i> Kalender Kegiatan </a></li>
+                <li><a href="<?php echo $admin_url . '/kesekretariatan/adart' ?>"><i class="fa fa-circle-o"></i> ADRT </a></li>
+                <li><a href="<?php echo $admin_url . '/kesekretariatan/kongres' ?>"><i class="fa fa-circle-o"></i> Kongres </a></li>
+                <li><a href="<?php echo $admin_url . '/kesekretariatan/otsukaresama' ?>"><i class="fa fa-circle-o"></i> Otsukaresama </a></li>
+                <li><a href="<?php echo $admin_url . '/kesekretariatan/kalender' ?>"><i class="fa fa-circle-o"></i> Kalender Kegiatan </a></li>
             </ul>
         </li>
 
         <li>
-            <a href="<?php echo $admin_url . '/news' ?>">
+            <a href="<?php echo $admin_url . '/faq' ?>">
                 <i class="fa fa-question-circle"></i> <span>FAQ</span>
             </a>
         </li>
 
         <li>
-            <a href="<?php echo $admin_url . '/contact' ?>">
+            <a href="<?php echo $admin_url . '/kontak' ?>">
                 <i class="fa fa-comments"></i> <span>Kontak</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="<?php echo $admin_url . '/gambar' ?>">
+                <i class="fa fa-picture-o"></i> <span>Gambar</span>
             </a>
         </li>
 

@@ -12,6 +12,9 @@
 </head>
 <body>
 
+
+	<?php $this->load->view('modules/popup_event') ?>
+
 	<?php  
 		$this->load->view('common_modules/header');
 	?>

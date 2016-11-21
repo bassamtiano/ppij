@@ -6,7 +6,7 @@
 		
 		<div class="col-md-12 jurnal-thumbnail">
 			
-			<div class="" style="background:url(<?php echo base_url('files/pictures/' . $data->thumbnail ) ?>) center center; background-size:cover; height:500px;"></div>
+			<div class="" style="background:url(<?php echo base_url('files/jurnal/thumbnail/' . $data->thumbnail ) ?>) center center; background-size:cover; height:500px;"></div>
 		</div>
 
 	</div>
@@ -27,7 +27,7 @@
 					</h3>	
 					<div class="title-wrapper">
 						<span class="tw-date">
-							<?php echo $data->created_at ?>
+							<?php echo date('d F Y', strtotime($data->created_at)) ?>
 						</span>
 						<span class="tw-author">
 							Oleh <b>Admin</b>
@@ -36,9 +36,9 @@
 				</div>
 				
 				<div class="jwi-content">
-					
-					<?php echo $data->content ?>
-
+					<?php
+						echo $data->content;
+					?>
 				</div>
 			</div>
 		</div>

@@ -23,12 +23,12 @@
 
                         <div class="box box-primary">
                             <div class="box-header with-border">
-                                <h3 class="box-title">Aktifitas Diaspora</h3>
+                                <h3 class="box-title">Jurnal</h3>
                             </div><!-- /.box-header -->
                             <!-- form start -->
                             <div class="box-body">
                                 
-                                <a href=" <?php echo $admin_url . '/aktifitas/add' ?> " class="btn btn-primary">Add Aktifitas</a> 
+                                <a href=" <?php echo $admin_url . '/jurnal/konten/add' ?> " class="btn btn-primary">Add Jurnal</a> 
 
                                 <table id="table_aktifitas" class="table table-bordered table-striped">
                                     <thead>
@@ -55,9 +55,9 @@
                                                     echo '<td>' . $jval->jurnal_title . '</td>';
                                                     echo '<td>' . $jval->thumbnail . '</td>';
                                                     echo '<td>';
-                                                        echo '<a href="' . $admin_url . '/aktifitas/edit?id=' . $jval->id . '" class="btn btn-warning">Edit</a>';
+                                                        echo '<a href="' . $admin_url . '/jurnal/konten/' . $jval->id . '" class="btn btn-warning">Edit</a>';
                                                         ?>
-                                                            <a href="" data-toggle="modal" data-target="#modal_remove" class="btn btn-danger" onclick="modal_delete('<?php echo $jval->jurnal_title ?>',' <?php echo $jval->id ?>')">Delete</a>
+                                                            <a href="" data-toggle="modal" data-target="#modal_remove" class="btn btn-danger" onclick="modal_delete('<?php echo $jval->jurnal_title ?>',' <?php echo $jval->id ?>', '<?php echo $jval->thumbnail ?>')">Delete</a>
                                                         <?php
                                                         
                                                     echo '</td>';
@@ -116,10 +116,11 @@
             });
         });
 
-        function modal_delete(name, id) {
+        function modal_delete(name, id, thumbnail) {
             $('#modal-delete-title').html(name);
             $('#modal-delete-name').html(name);
             $('#modal-delete-id').val(id);
+            $('#modal-delete-thumbnail').val(thumbnail);
         }
 
     </script>
@@ -132,3 +133,5 @@
     }
 
     </style>
+
+    <?php echo $modal; ?>

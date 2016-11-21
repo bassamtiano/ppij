@@ -13,12 +13,13 @@
 	        <div class="col-md-10 col-md-offset-1" >
 
 	        	<div style="float:left; padding:3px;">
-	        		<img src=" <?php echo base_url() . 'assets/img/ppij-logo.svg' ?> " style="float: left; width: 80px; margin: 5px;" />
-	        		<div style="float: left; width: 250px; margin-left: 10px;">
-	        			<b style="font-size: 22px; margin: 0; padding: 0;  float: left; width: 100%;">Persatuan Pelajar Indonesia</b>
-	        			<span style="font-size: 17px; margin: 0; padding: 0; line-height: 80%; float: left; width: 100%;" >Jepang</span>	
-	        		</div>
-	        		
+	        		<a href="<?php echo base_url() . 'index.php' ?>" style="color:black;">
+		        		<img src=" <?php echo base_url() . 'assets/img/ppij-logo.svg' ?> " style="float: left; width: 80px; margin: 5px;" />
+		        		<div style="float: left; width: 250px; margin-left: 10px;">
+		        			<b style="font-size: 22px; margin: 0; padding: 0;  float: left; width: 100%;">Persatuan Pelajar Indonesia</b>
+		        			<span style="font-size: 17px; margin: 0; padding: 0; line-height: 80%; float: left; width: 100%;" >Jepang</span>	
+		        		</div>
+	        		</a>
 	        	</div>
 
 	        	<ul class="subnavbar-wrapper">

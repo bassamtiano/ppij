@@ -53,9 +53,35 @@ $route['default_controller'] = 'main';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+/*
+	Prefix Admin URL
+*/
+
+$route['admin/about/history'] = 'admin/history';
+$route['admin/about/pengurus'] = 'admin/pengurus';
+$route['admin/about/korda_komsat'] = 'admin/korda_komsat';
+
+$route['admin/jurnal/kategori'] = 'admin/jurnal_kategori';
+$route['admin/jurnal/konten'] = 'admin/jurnal';
+$route['admin/jurnal/konten/add'] = 'admin/jurnal_konten_add';
+$route['admin/jurnal/konten/(:any)'] = 'admin/jurnal_konten_edit/$1';
+
+$route['admin/jurnal/tambah_gambar'] = 'admin/jurnal_galery_tambah';
+$route['admin/jurnal/hapus_gambar'] = 'admin/jurnal_galery_hapus';
+
+$route['admin/panduanstudi/beasiswa'] = 'admin/beasiswa';
+$route['admin/panduanstudi/kuliahdijepang'] = 'admin/kuliahdijepang';
+
+$route['admin/kesekretariatan/adart'] = 'admin/adart';
+$route['admin/kesekretariatan/kongres'] = 'admin/kongres';
+$route['admin/kesekretariatan/otsukaresama'] = 'admin/otsukaresama';
+$route['admin/kesekretariatan/kalender'] = 'admin/kalender';
+
 $route['jurnal/(:any)'] = 'jurnal/kategori/$1';
 $route['jurnal/(:any)/(:any)/(:any)/(:any)/(:any)'] = 'jurnal/artikel/$1/$2/$3/$4/$5';
 
 $route['panduanstudi/beasiswa/(:any)'] = 'panduanstudi/beasiswa_konten/$1';
 
 $route['kesekretariatan/kalender/(:any)/(:any)/(:any)/(:any)'] = 'kesekretariatan/kegiatan/$1/$2/$3/$4';
+
+
