@@ -13,6 +13,8 @@
 
     <link rel="stylesheet" type="text/css" href=" <?php echo base_url('assets/css/select2.min.css') ?> " />
 
+    <link rel="stylesheet" type="text/css" href=" <?php echo base_url('assets/css/bootstrap-datetimepicker.min.css') ?> " />
+
     <link rel="stylesheet" type="text/css" href=" <?php echo base_url('assets/css/AdminLTE.min.css') ?> " />
     <link rel="stylesheet" type="text/css" href=" <?php echo base_url('assets/css/skins/_all-skins.min.css') ?> " />
 
@@ -37,7 +39,11 @@
     <script type="text/javascript" src="<?php echo base_url('assets/js/jquery-ui.min.js'); ?>"></script>
 
     <script type="text/javascript" src="<?php echo base_url('assets/js/select2.full.min.js'); ?>"></script>
+
     <script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.min.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assets/js/moment.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap-datetimepicker.min.js'); ?>"></script>
+
 
     <script src="https://cdn.ckeditor.com/4.4.3/standard/ckeditor.js"></script>
     <script type="text/javascript" src="<?php echo base_url('assets/js/adminlte.min.js'); ?>"></script>
@@ -46,6 +52,14 @@
         $(function () {
             CKEDITOR.replace('editor1');
             $(".select2").select2();
+
+            $('.tanggal-datepicker').datetimepicker({
+                format: 'YYYY-MM-DD'
+            });
+
+            $('.waktu-datepicker').datetimepicker({
+                format: 'hh:mm'
+            });
         });
     </script>
 

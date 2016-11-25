@@ -43,7 +43,7 @@
 
 		public function kalender() {
 
-			$data['content'] = $this->Kalender->get_kalender('id, nama, tempat, tanggal, waktu_mulai, waktu_selesai, konten, poster');
+			$data['content'] = $this->Kalender->get_kalender('id, nama, tempat, tanggal, waktu_mulai, waktu_selesai, content, poster');
 			
 
 			$interface['content'] = $this->load->view('pages/kalender', $data, TRUE);
@@ -52,7 +52,7 @@
 
 		public function kegiatan($year, $month, $day, $id) {
 
-			$column = 'id, nama, tempat, tanggal, waktu_mulai, waktu_selesai, konten, poster, created_at';
+			$column = 'id, nama, tempat, tanggal, waktu_mulai, waktu_selesai, content, poster, created_at';
 
 			$konten['data'] = $this->Kalender->select_kalender($id, $year . '-' . $month . '-' . $day, $column);
 

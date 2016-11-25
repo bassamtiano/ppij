@@ -14,7 +14,7 @@
 		public $tanggal;
 		public $waktu_mulai;
 		public $waktu_selesai;
-		public $konten;
+		public $content;
 
 		public $created_at;
 		public $updated_at;
@@ -29,7 +29,8 @@
 			}
 
 			$this->db->from(self::$table);
-			
+			$this->db->order_by('tanggal','ASC');
+
 			$query = $this->db->get();
 			if ($query->num_rows() > 0)
 				foreach ($query->result() as $row) $data[] = $row;

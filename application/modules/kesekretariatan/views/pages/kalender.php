@@ -56,7 +56,7 @@
 										<?php echo $cval->tempat ?>
 									</div>
 									<div class="desc-content">
-										<?php echo $cval->konten ?>
+										<?php echo $cval->content ?>
 									</div>
 									<div class="desc-button">
 										<a class="btn btn-primary" href="">POSTER</a>
@@ -91,7 +91,7 @@
 										<?php echo $cval->tempat ?>
 									</div>
 									<div class="desc-content">
-										<?php echo $cval->konten ?>
+										<?php echo $cval->content ?>
 									</div>
 									<div class="desc-button">
 										<a class="btn btn-primary" href="">POSTER</a>

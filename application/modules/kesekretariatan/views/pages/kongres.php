@@ -4,16 +4,17 @@
 			<div class="kongres-item">
 				
 				<div class="item-title">
-					<h3>
-						<?php echo $content->title ?>
-					</h3>	
-					<div class="title-wrapper">
-						<span class="tw-date">
-							1 Januari 2019
-						</span>
-						<span class="tw-author">
-							Oleh <b>Admin</b>
-						</span>
+					<div class="item-title">
+						<div class="logo">
+							<img src=" <?php echo base_url() . 'assets/img/ppij-logo.svg' ?> " />
+						</div>
+
+						<h2>
+							<b>
+								Informasi Kongres
+							</b>
+						</h2>	
+						<h3>Persatuan Pelajar Indonesia Jepang</h3>
 					</div>
 				</div>
 				

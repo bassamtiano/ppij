@@ -170,6 +170,13 @@
 	border-bottom: solid #F0F2F4 1px;
 }
 
+.kegiatan-content .kegiatan-wrapper .kc-item .item-title h3 {
+	width: 100%;
+	padding: 15px 0;
+	float: left;
+	text-align: left;
+}
+
 .kegiatan-content .kegiatan-wrapper .kc-item .item-title .tw-date {
 	width: 50%;
 	text-align: left;
@@ -252,6 +259,9 @@
 	border-radius: 3px 3px 0 0;
 }
 
+
+
+
 .kongres-list .list-wrapper .lw-container .list-item .li-img {
 
 }
@@ -321,40 +331,27 @@
 	margin-top: 20px;
 	margin-bottom: 20px;
 	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
-.kongres-content .kongres-wrapper .kongres-item .item-title {
-	width: calc(100% - 60px);
-
-	margin: 20px 30px 0 30px;
-
-	float: left;
-
-	border-bottom: solid #F0F2F4 1px;
-}
-
-.kongres-content .kongres-wrapper .kongres-item .item-title h3 {
-	padding: 0;
-	margin: 0;
-}
-
-.kongres-content .kongres-wrapper .kongres-item .item-title .title-wrapper {
-	float: left;
+.kongres-content .kongres-wrapper .kongres-item .item-title .logo {
 	width: 100%;
-	padding: 10px 0 10px 0;
-}
-
-.kongres-content .kongres-wrapper .kongres-item .item-title .title-wrapper .tw-date {
-	width: 50%;
-	text-align: left;
 	float: left;
+}
+
+.kongres-content .kongres-wrapper .kongres-item .item-title .logo img {
+	display: block;
+    margin: 0 auto;
+    height: 100px;
+    margin-bottom: 20px;
 
 }
 
-.kongres-content .kongres-wrapper .kongres-item .item-title .title-wrapper .tw-author {
-	text-align: right;
-	width: 50%;
-	float: right;
+.kongres-content .kongres-wrapper .kongres-item .item-title h2, h3, h4 {
+	padding: 4px 0;
+	margin: 0;
+	text-align: center;
 }
 
 

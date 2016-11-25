@@ -2,8 +2,8 @@
 	<div class="row beasiswa-item-wrapper">
 		<div class="col-md-10 col-md-offset-1">
 			<div class="bic-item">
-				<div class="item-poster">
-					<img src=" <?php echo base_url() . 'files/beasiswa/pictures/' . $data->thumbnail ?> ">
+				<div class="item-poster" >
+					<img style="width: 100%" src=" <?php echo base_url() . 'files/panduanstudi/thumbnail/' . $data->thumbnail ?> ">
 				</div>
 				
 				<div class="item-title">

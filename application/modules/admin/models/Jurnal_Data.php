@@ -50,6 +50,8 @@
 			$query = $this->db->get(self::$table);
 			if ($query->num_rows() > 0)
 				foreach ($query->result() as $row) $data[] = $row;
+			else
+				$data = [];
 			return $data;
 		}
 

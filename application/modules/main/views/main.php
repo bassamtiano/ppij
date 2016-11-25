@@ -249,110 +249,56 @@
 				<h1 class="mbt-title">Berita Terbaru</h1>
 
 				<div class="row mbt-wrapper">
-					
-					<div class="col-md-4 ">
-						<div class="mbt-item">
-							<div class="mbti-img">
-								<span class="mbti-label" style=" ">
-									Acara
-								</span>
-					
-								<div class="mbti-image-content" style="background:url(<?php echo base_url('files/pictures/1.jpg') ?>) center center; background-size:cover; "></div>
 
+						<?php foreach ($data as $dkey => $dval): ?>
+
+						<?php $date = date_parse($dval->created_at); ?>
+
+						
+							<div class="col-md-4 ">
+								<div class="mbt-item">
+									<div class="mbti-img">
+										<span class="mbti-label" style=" ">
+											<?php echo $dval->kategori ?>
+										</span>
+							
+										<div class="mbti-image-content" style="background:url(<?php echo base_url('files/jurnal/thumbnail/' . $dval->thumbnail) ?>) center center; background-size:cover; "></div>
+
+									</div>
+									<h3 class="mbti-title">
+										<?php echo $dval->title ?>
+									</h3>
+									<div class="mbti-info">
+										<span class="info-module" style="text-align: left;">
+											Category : <?php echo $dval->kategori ?>
+										</span>
+										<span class="info-module" style="text-align: right;">
+											Written By : Admin
+										</span>
+									</div>
+									<div class="mbti-desc">
+
+										<?php
+											$content = $dval->content;
+											$content = preg_replace("/<img[^>]+\>/i", "", $content); 
+					    					echo $content;
+										?>
+									</div>
+									<div class="mbti-button">
+										<a href=" <?php echo base_url() . '/index.php/jurnal/' . str_replace(' ', '_', $dval->kategori) . '/' . $date['year'] . '/' . $date['month'] . '/' . $date['day'] . '/' . $dval->id ?> " class="btn btn-success">
+											LEBIH LANJUT
+										</a>
+									</div>
+								</div>
 							</div>
-							<h3 class="mbti-title">
-								Pengurus PPI Jepang 2016-2017 - Kominfo
-							</h3>
-							<div class="mbti-info">
-								<span class="info-module" style="text-align: left;">
-									Category : Jurnal
-								</span>
-								<span class="info-module" style="text-align: right;">
-									Written By : Admin
-								</span>
-							</div>
-							<div class="mbti-desc">
-								Halo sahabat bangsa! Sesuai pepatah "tak kenal maka tak sayang" maka ijinkan kami memperkenalkan diri kami sebagai pengurus harian PPI Jepang 2016-2017. Perkenalan ini dibagi menjadi tiga bagian dan yang mendapat kesempatan di bagian pertama ini adalah Tim Kominfo. Yuk kita lihat siapa saja yang ada di tim yang berperan untuk menjalankan media komunikasi PPI Jepang!
-							</div>
-							<div class="mbti-button">
-								<a href="#" class="btn btn-success">
-									LEBIH LANJUT
-								</a>
-							</div>
-						</div>
+						
+						<?php endforeach ?>
 					</div>
-					
-					<div class="col-md-4 ">
-						<div class="mbt-item">
-							<div class="mbti-img">
-								<span class="mbti-label" style=" ">
-									Acara
-								</span>
-					
-								<div class="mbti-image-content" style="background:url(<?php echo base_url('files/pictures/2.jpg') ?>) center center; background-size:cover; "></div>
-
-							</div>
-							<h3 class="mbti-title">
-								Pengurus PPI Jepang 2016-2017 - Kominfo
-							</h3>
-							<div class="mbti-info">
-								<span class="info-module" style="text-align: left;">
-									Category : Jurnal
-								</span>
-								<span class="info-module" style="text-align: right;">
-									Written By : Admin
-								</span>
-							</div>
-							<div class="mbti-desc">
-								Halo sahabat bangsa! Sesuai pepatah "tak kenal maka tak sayang" maka ijinkan kami memperkenalkan diri kami sebagai pengurus harian PPI Jepang 2016-2017. Perkenalan ini dibagi menjadi tiga bagian dan yang mendapat kesempatan di bagian pertama ini adalah Tim Kominfo. Yuk kita lihat siapa saja yang ada di tim yang berperan untuk menjalankan media komunikasi PPI Jepang!
-							</div>
-							<div class="mbti-button">
-								<a href="#" class="btn btn-success">
-									LEBIH LANJUT
-								</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-md-4 ">
-						<div class="mbt-item">
-							<div class="mbti-img">
-								<span class="mbti-label" style=" ">
-									Acara
-								</span>
-					
-								<div class="mbti-image-content" style="background:url(<?php echo base_url('files/pictures/3.jpg') ?>) center center; background-size:cover; "></div>
-
-							</div>
-							<h3 class="mbti-title">
-								Pengurus PPI Jepang 2016-2017 - Kominfo
-							</h3>
-							<div class="mbti-info">
-								<span class="info-module" style="text-align: left;">
-									Category : Jurnal
-								</span>
-								<span class="info-module" style="text-align: right;">
-									Written By : Admin
-								</span>
-							</div>
-							<div class="mbti-desc">
-								Halo sahabat bangsa! Sesuai pepatah "tak kenal maka tak sayang" maka ijinkan kami memperkenalkan diri kami sebagai pengurus harian PPI Jepang 2016-2017. Perkenalan ini dibagi menjadi tiga bagian dan yang mendapat kesempatan di bagian pertama ini adalah Tim Kominfo. Yuk kita lihat siapa saja yang ada di tim yang berperan untuk menjalankan media komunikasi PPI Jepang!
-							</div>
-							<div class="mbti-button">
-								<a href="#" class="btn btn-success">
-									LEBIH LANJUT
-								</a>
-							</div>
-						</div>
-					</div>
-
-				</div>
-
 			</div>
 
 			<div class="col-md-10 col-md-offset-1" style="margin-top: 30px;">
 				
-				<a class="btn btn-success" href="" style="width: 80%; margin-left: 10%; float: left;">LIHAT SELENGKAPNYA</a>
+				<a class="btn btn-success" href=" <?php echo base_url() . '/index.php/jurnal/' ?> " style="width: 80%; margin-left: 10%; float: left;">LIHAT SELENGKAPNYA</a>
 
 			</div>
 
@@ -362,10 +308,15 @@
 
 	<?php 
 		$this->load->view('common_modules/footer');
+
+		echo $modal;
 	?>
 
+
+
 	<script type="text/javascript">
-		$('.carousel').carousel()
+		$('.carousel').carousel();
+		$('#modal_event').modal('show') ;
 	</script>
 
 </body>

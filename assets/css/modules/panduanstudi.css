@@ -145,6 +145,14 @@
 	border-bottom: solid #F0F2F4 1px;
 }
 
+.beasiswa-item-content .beasiswa-item-wrapper .bic-item .item-title h3 {
+	width: 100%;
+	float: left;
+	text-align: left;
+
+	padding: 20px 0;
+}
+
 .beasiswa-item-content .beasiswa-item-wrapper .bic-item .item-title .tw-date {
 	width: 50%;
 	text-align: left;

@@ -57,6 +57,9 @@ $route['translate_uri_dashes'] = FALSE;
 	Prefix Admin URL
 */
 
+$route['admin/main/slideshow'] = 'admin/slideshow';
+$route['admin/main/events'] = 'admin/events';
+
 $route['admin/about/history'] = 'admin/history';
 $route['admin/about/pengurus'] = 'admin/pengurus';
 $route['admin/about/korda_komsat'] = 'admin/korda_komsat';
@@ -70,12 +73,25 @@ $route['admin/jurnal/tambah_gambar'] = 'admin/jurnal_galery_tambah';
 $route['admin/jurnal/hapus_gambar'] = 'admin/jurnal_galery_hapus';
 
 $route['admin/panduanstudi/beasiswa'] = 'admin/beasiswa';
+
+$route['admin/panduanstudi/beasiswa/add'] = 'admin/beasiswa_konten_add';
+$route['admin/panduanstudi/beasiswa/(:any)'] = 'admin/beasiswa_konten_edit/$1';
+
+
 $route['admin/panduanstudi/kuliahdijepang'] = 'admin/kuliahdijepang';
+
+$route['admin/panduanstudi/kuliahdijepang/add'] = 'admin/kuliahdijepang_konten_add';
+$route['admin/panduanstudi/kuliahdijepang/(:any)'] = 'admin/kuliahdijepang_konten_edit/$1';
 
 $route['admin/kesekretariatan/adart'] = 'admin/adart';
 $route['admin/kesekretariatan/kongres'] = 'admin/kongres';
+
 $route['admin/kesekretariatan/otsukaresama'] = 'admin/otsukaresama';
+$route['admin/kesekretariatan/otsukaresama/(:any)'] = 'admin/otsukaresama_konten/$1';
+
 $route['admin/kesekretariatan/kalender'] = 'admin/kalender';
+$route['admin/kesekretariatan/kalender/add'] = 'admin/kalender_ui_add';
+$route['admin/kesekretariatan/kalender/(:any)'] = 'admin/kalender_ui_edit/$1';
 
 $route['jurnal/(:any)'] = 'jurnal/kategori/$1';
 $route['jurnal/(:any)/(:any)/(:any)/(:any)/(:any)'] = 'jurnal/artikel/$1/$2/$3/$4/$5';

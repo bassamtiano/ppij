@@ -64,7 +64,6 @@
                                     <a class="btn btn-primary" data-toggle="modal" data-target="#add_gambar">
                                         <i class="fa fa-picture-o" style="margin-right: 10px;"></i>Ambil Gambar Galery
                                     </a>
-
                                 </label>
                                 
                             </div>

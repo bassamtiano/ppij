@@ -28,7 +28,7 @@
                             <!-- form start -->
                             <div class="box-body">
                                 
-                                <a href=" <?php echo $admin_url . '/aktifitas/add' ?> " class="btn btn-primary">Add Aktifitas</a> 
+                                <a href="" data-toggle="modal" data-target="#modal_add" class="btn btn-primary">Add Aktifitas</a> 
 
                                 <table id="table_aktifitas" class="table table-bordered table-striped">
                                     <thead>
@@ -49,8 +49,8 @@
                                                     echo '<td>' . $kcount . '</td>';
                                                     echo '<td>' . $kval->kategori . '</td>';
                                                     echo '<td>';
-                                                        echo '<a href="' . $admin_url . '/aktifitas/edit?id=' . $kval->id . '" class="btn btn-warning">Edit</a>';
                                                         ?>
+                                                            <a href="" data-toggle="modal" data-target="#modal_edit" class="btn btn-warning" onclick="modal_edit('<?php echo $kval->id ?>',' <?php echo $kval->kategori ?>')">Edit</a>
                                                             <a href="" data-toggle="modal" data-target="#modal_remove" class="btn btn-danger" onclick="modal_delete('<?php echo $kval->kategori ?>',' <?php echo $kval->id ?>')">Delete</a>
                                                         <?php
                                                         
@@ -107,6 +107,12 @@
             });
         });
 
+        function modal_edit(id, name) {
+            $('#modal-edit-kategori').val(name);
+            $('#modal-edit-title').html(name);
+            $('#modal-edit-id').val(id)
+        }
+
         function modal_delete(name, id) {
             $('#modal-delete-title').html(name);
             $('#modal-delete-name').html(name);
@@ -123,3 +129,5 @@
     }
 
     </style>
+
+    <?php echo $modal; ?>

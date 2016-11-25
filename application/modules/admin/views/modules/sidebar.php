@@ -31,10 +31,18 @@
             </a>
         </li>
 
-        <li>
-            <a href="<?php echo $admin_url . '/slideshow' ?>">
-                <i class="fa fa-picture-o"></i> <span>Slide Show</span>
+        <li class="treeview">
+            <a href=" <?php echo $admin_url ?> ">
+                <i class="fa fa-home"></i> <span>Homepage</span> <i class="fa fa-angle-left pull-right"></i>
             </a>
+            <ul class="treeview-menu">
+                <li class="active"><a href="<?php echo $admin_url . '/main/slideshow' ?>">
+                    <i class="fa fa-circle-o"></i>Slide Show</a>
+                </li>
+                <li class="active"><a href="<?php echo $admin_url . '/main/events' ?>">
+                    <i class="fa fa-circle-o"></i>Event</a>
+                </li>
+            </ul>
         </li>
 
         <li class="treeview">
@@ -66,8 +74,8 @@
                 <i class="fa fa-angle-left pull-right"></i>
             </a>
             <ul class="treeview-menu">
-                <li><a href="<?php echo $admin_url . '/panduanstudi/beasiswa' ?>"><i class="fa fa-circle-o"></i>Kuliah di Jepang</a></li>
-                <li><a href="<?php echo $admin_url . '/panduanstudi/kuliahdijepang' ?>"><i class="fa fa-circle-o"></i> Beasiswa </a></li>
+                <li><a href="<?php echo $admin_url . '/panduanstudi/kuliahdijepang' ?>"><i class="fa fa-circle-o"></i>Kuliah di Jepang</a></li>
+                <li><a href="<?php echo $admin_url . '/panduanstudi/beasiswa' ?>"><i class="fa fa-circle-o"></i> Beasiswa </a></li>
                 
             </ul>
         </li>

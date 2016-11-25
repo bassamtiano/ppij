@@ -12,7 +12,7 @@
 				<div class="col-md-4" style="margin-bottom:20px;">
 					
 					<div class="beasiswa-item">
-						<div class="bi-thumbnail" style="background:url(<?php echo base_url('files/beasiswa/pictures/' . $dval->thumbnail) ?>) center center; background-size:cover;">
+						<div class="bi-thumbnail" style="background:url(<?php echo base_url('files/panduanstudi/thumbnail/' . $dval->thumbnail) ?>) center center; background-size:cover;">
 							
 						</div>
 						<div class="bi-description">
@@ -32,7 +32,12 @@
 								?>
 							</span>
 							<div class="bid-persyaratan">
-								<?php echo $dval->content; ?>
+								<?php 
+									$content = $dval->content;
+									$content = preg_replace("/<img[^>]+\>/i", "", $content); 
+			    					echo $content;
+								?>
+
 							</div>
 							<div class="bid-button">
 								<a class="btn btn-success" href=" <?php echo base_url() . 'index.php/panduanstudi/beasiswa/' . $dval->id ?> ">
