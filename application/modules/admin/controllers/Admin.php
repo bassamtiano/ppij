@@ -10,7 +10,7 @@
 			$this->form_validation->set_error_delimiters($this->config->item('error_start_delimiter', 'ion_auth'), $this->config->item('error_end_delimiter', 'ion_auth'));
 
 			if (!$this->ion_auth->is_admin()) {
-				return redirect('login');
+				redirect('login');
 			}
 			
 
@@ -87,12 +87,12 @@
 				'url' => $file_name,
 				'title' => $this->input->post('title'),
 				'description' => $this->input->post('description'),
-				'status' => $this->input->post('status'),
+				'status' => $this->input->post('status')
 			];
 
 			$this->Slideshow->add_slideshow($data);
 
-			return redirect('admin/main/slideshow');
+			redirect('admin/main/slideshow');
 		}
 
 		public function slideshow_edit() {
@@ -135,7 +135,7 @@
 			
 			$this->Slideshow->edit_slideshow($this->input->post('id'), $data);
 
-			return redirect('admin/main/slideshow');
+			redirect('admin/main/slideshow');
 		}
 
 		public function slideshow_delete() {
@@ -144,7 +144,7 @@
 			$path = $_SERVER['DOCUMENT_ROOT'] . '/ppij/files/slideshow/img/';
 			unlink($path . $this->input->post('url'));
 
-			return redirect('admin/main/slideshow');
+			redirect('admin/main/slideshow');
 		}
 
 		/* ========== Events Konten =====================================================================================
@@ -191,7 +191,7 @@
 
 			$this->Events->add_events($data);
 
-			return redirect('admin/main/events');	
+			redirect('admin/main/events');	
 		}
 
 		public function events_edit() {
@@ -234,7 +234,7 @@
 			
 			$this->Events->edit_events($this->input->post('id'), $data);
 
-			return redirect('admin/main/events');
+			redirect('admin/main/events');
 		}
 
 		public function events_delete() {
@@ -243,7 +243,7 @@
 			$path = $_SERVER['DOCUMENT_ROOT'] . '/ppij/files/events/img/';
 			unlink($path . $this->input->post('url'));
 
-			return redirect('admin/main/events');
+			redirect('admin/main/events');
 		}
 
 		/* ========== History Konten ====================================================================================
@@ -267,7 +267,7 @@
 				'updated_at' => date("Y/m/d")
 			];
 			$this->About_Data->edit_about(1, $data);
-			return redirect('admin/about/history');
+			redirect('admin/about/history');
 		}
 
 		/* ========== Pengurus Konten ===================================================================================
@@ -291,7 +291,7 @@
 				'updated_at' => date("Y/m/d")
 			];
 			$this->About_Data->edit_about(2, $data);
-			return redirect('admin/about/pengurus');
+			redirect('admin/about/pengurus');
 		}
 
 
@@ -316,7 +316,7 @@
 				'updated_at' => date("Y/m/d")
 			];
 			$this->About_Data->edit_about(3, $data);
-			return redirect('admin/about/korda');
+			redirect('admin/about/korda');
 		}
 
 		/* ========== Jurnal Kategori =================================================================================== //
@@ -340,7 +340,7 @@
 				'created_at' => date("Y/m/d")
 			];
 			$this->Jurnal_Kategori->add_jurnal_kategori($data);
-			return redirect('admin/jurnal/kategori');
+			redirect('admin/jurnal/kategori');
 		}
 
 		public function jurnal_kategori_edit() {
@@ -349,12 +349,12 @@
 				'modified_at' => date("Y/m/d")
 			];
 			$this->Jurnal_Kategori->edit_jurnal_kategori($this->input->post('id'), $data);
-			return redirect('admin/jurnal/kategori');
+			redirect('admin/jurnal/kategori');
 		}
 
 		public function jurnal_kategori_remove() {
 			$this->Jurnal_Kategori->delete_jurnal_kategori($this->input->post('id'));
-			return redirect('admin/jurnal/kategori');
+			redirect('admin/jurnal/kategori');
 		}
 
 		/* ========== Jurnal Konten ===================================================================================== 
@@ -417,7 +417,7 @@
 			];
 			$this->Galery->add_galery($data);
 
-			return redirect('admin/jurnal/konten/add');
+			redirect('admin/jurnal/konten/add');
 		}
 
 		public function jurnal_galery_hapus() {
@@ -430,7 +430,7 @@
 			unlink($path . $file_name);
 
 			$this->Galery->delete_galery($file_id);
-			// return redirect('admin/jurnal/konten/add');
+			// redirect('admin/jurnal/konten/add');
 		}
 
 		public function jurnal_add() {
@@ -462,7 +462,7 @@
 
 			$this->Jurnal_Data->add_jurnal($data);
 
-			return redirect('admin/jurnal');
+			redirect('admin/jurnal');
 		}
 
 		public function jurnal_konten_edit($id) {
@@ -521,7 +521,7 @@
 			
 			$this->Jurnal_Data->edit_jurnal($this->input->post('id'), $data);
 
-			return redirect('admin/jurnal');
+			redirect('admin/jurnal');
 		}
 
 		public function jurnal_remove() {
@@ -530,7 +530,7 @@
 			$path = $_SERVER['DOCUMENT_ROOT'] . '/ppij/files/jurnal/thumbnail/';
 			unlink($path . $this->input->post('thumbnail'));
 
-			return redirect('admin/jurnal');
+			redirect('admin/jurnal');
 		}
 
 		/* ========== Kuliah di Jepang Konten ===========================================================================
@@ -567,7 +567,7 @@
 			];
 
 			$this->Panduan_Studi_Kuliah->add_panduan_studi_kuliah($data);
-			return redirect('admin/panduanstudi/kuliahdijepang');
+			redirect('admin/panduanstudi/kuliahdijepang');
 		}
 
 		public function kuliahdijepang_konten_edit($id) {
@@ -592,12 +592,12 @@
 			];
 
 			$this->Panduan_Studi_Kuliah->edit_panduan_studi_kuliah($this->input->post('id'), $data);
-			return redirect('admin/panduanstudi/kuliahdijepang');
+			redirect('admin/panduanstudi/kuliahdijepang');
 		}
 
 		public function kuliahdijepang_delete() {
 			$this->Panduan_Studi_Kuliah->delete_panduan_studi_kuliah($this->input->post('id'));
-			return redirect('admin/panduanstudi/kuliahdijepang');
+			redirect('admin/panduanstudi/kuliahdijepang');
 		}
 
 		/* ========== Beasiswa Konten ===================================================================================
@@ -656,7 +656,7 @@
 
 			$this->Beasiswa->add_beasiswa($data);
 
-			return redirect('admin/panduanstudi/beasiswa');
+			redirect('admin/panduanstudi/beasiswa');
 		}
 
 		public function beasiswa_konten_edit($id) {
@@ -712,7 +712,7 @@
 
 			$this->Beasiswa->edit_beasiswa($this->input->post('id'), $data);
 
-			return redirect('admin/panduanstudi/beasiswa');
+			redirect('admin/panduanstudi/beasiswa');
 		}
 
 		public function beasiswa_remove() {
@@ -721,7 +721,7 @@
 			$path = $_SERVER['DOCUMENT_ROOT'] . '/ppij/files/panduanstudi/thumbnail/';
 			unlink($path . $this->input->post('thumbnail'));
 
-			return redirect('admin/panduanstudi/beasiswa');
+			redirect('admin/panduanstudi/beasiswa');
 		}
 
 		/* ========== AD / ART Konten ===================================================================================
@@ -745,7 +745,7 @@
 				'updated_at' => date("Y/m/d")
 			];
 			$this->Kesekretariatan_Data->edit_kesekretariatan(1, $data);
-			return redirect('admin/kesekretariatan/adart');
+			redirect('admin/kesekretariatan/adart');
 		}
 
 		/* ========== Kongres Konten ====================================================================================
@@ -771,7 +771,7 @@
 				'updated_at' => date("Y/m/d")
 			];
 			$this->Kesekretariatan_Data->edit_kesekretariatan(2, $data);
-			return redirect('admin/kesekretariatan/kongres');
+			redirect('admin/kesekretariatan/kongres');
 		}
 
 
@@ -797,7 +797,7 @@
 
 			$this->Otsukaresama->add_otsukaresama($data);
 
-			return redirect('admin/kesekretariatan/otsukaresama');
+			redirect('admin/kesekretariatan/otsukaresama');
 		}
 
 		public function otsukaresama_edit() {
@@ -808,12 +808,12 @@
 
 			$this->Otsukaresama->edit_otsukaresama($this->input->post('id'), $data);
 
-			return redirect('admin/kesekretariatan/otsukaresama');
+			redirect('admin/kesekretariatan/otsukaresama');
 		}
 
 		public function otsukaresama_remove() {
 			$this->Otsukaresama->delete_otsukaresama($this->input->post('id'));
-			return redirect('admin/kesekretariatan/otsukaresama');	
+			redirect('admin/kesekretariatan/otsukaresama');	
 		}
 
 		public function otsukaresama_konten($id) {
@@ -863,7 +863,7 @@
 
 			$this->Otsukaresama_Konten->add_otsukaresama_konten($data);
 
-			return redirect('admin/kesekretariatan/otsukaresama/' . $this->input->post('id_otsukaresama'));
+			redirect('admin/kesekretariatan/otsukaresama/' . $this->input->post('id_otsukaresama'));
 
 		}
 
@@ -876,7 +876,7 @@
 				unlink($path . $this->input->post('url'));	
 			}
 			
-			return redirect('admin/kesekretariatan/otsukaresama/' . $this->input->post('id_otsukaresama'));
+			redirect('admin/kesekretariatan/otsukaresama/' . $this->input->post('id_otsukaresama'));
 		}
 
 		/* ========== Kalender Kegiatan Konten ==========================================================================
@@ -955,7 +955,7 @@
 
 			$this->Kalender->add_kalender($data);
 
-			return redirect('admin/kesekretariatan/kalender');
+			redirect('admin/kesekretariatan/kalender');
 		}
 
 		public function kalender_ui_edit($id) {
@@ -1032,7 +1032,7 @@
 			];
 
 			$this->Kalender->edit_kalender($this->input->post('id'), $data);
-			return redirect('admin/kesekretariatan/kalender');
+			redirect('admin/kesekretariatan/kalender');
 		}
 
 		public function kalender_remove() {
@@ -1042,7 +1042,7 @@
 			unlink($path . $this->input->post('thumbnail'));
 			unlink($path . $this->input->post('poster'));
 
-			return redirect('admin/kesekretariatan/kalender');
+			redirect('admin/kesekretariatan/kalender');
 		}
 
 		/* ========== FAQ Konten ========================================================================================
@@ -1066,7 +1066,7 @@
 				'updated_at' => date("Y/m/d")
 			];
 			$this->Faq_Data->edit_faq(1, $data);
-			return redirect('admin/faq');
+			redirect('admin/faq');
 		}
 
 		/* ========== Galery Konten =====================================================================================	
