@@ -290,7 +290,7 @@
 										?>
 									</div>
 									<div class="mbti-button">
-										<a href=" <?php echo base_url() . '/index.php/jurnal/' . str_replace(' ', '_', $dval->kategori) . '/' . $date['year'] . '/' . $date['month'] . '/' . $date['day'] . '/' . $dval->id ?> " class="btn btn-success">
+										<a href=" <?php echo base_url() . 'index.php/jurnal/' . str_replace(' ', '_', $dval->kategori) . '/' . $date['year'] . '/' . $date['month'] . '/' . $date['day'] . '/' . $dval->id ?> " class="btn btn-success">
 											LEBIH LANJUT
 										</a>
 									</div>
@@ -303,7 +303,7 @@
 
 			<div class="col-md-10 col-md-offset-1" style="margin-top: 30px;">
 				
-				<a class="btn btn-success" href=" <?php echo base_url() . '/index.php/jurnal/' ?> " style="width: 80%; margin-left: 10%; float: left;">LIHAT SELENGKAPNYA</a>
+				<a class="btn btn-success" href=" <?php echo base_url() . 'index.php/jurnal/' ?> " style="width: 80%; margin-left: 10%; float: left;">LIHAT SELENGKAPNYA</a>
 
 			</div>
 

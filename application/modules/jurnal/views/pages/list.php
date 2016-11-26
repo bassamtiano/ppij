@@ -39,7 +39,7 @@
 							?>
 						</div>
 						<div class="li-button">
-							<a href="<?php echo base_url() . '/index.php/jurnal/' . str_replace(' ', '_', $dval->kategori) . '/' . $date['year'] . '/' . $date['month'] . '/' . $date['day'] . '/' . $dval->id  ?>" class="btn btn-success">
+							<a href="<?php echo base_url() . 'index.php/jurnal/' . str_replace(' ', '_', $dval->kategori) . '/' . $date['year'] . '/' . $date['month'] . '/' . $date['day'] . '/' . $dval->id  ?>" class="btn btn-success">
 								LEBIH LANJUT
 							</a>
 						</div>
