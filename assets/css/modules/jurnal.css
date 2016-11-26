@@ -127,6 +127,8 @@
 	background: white;
 	border-radius: 3px;
 	margin-bottom: 20px;
+
+	height: 600px;
 }
 
 .jurnal-list .list-wrapper .lw-container .list-item:hover {
@@ -186,6 +188,8 @@
 .jurnal-list .list-wrapper .lw-container .list-item .li-desc {
 	padding: 10px 20px 10px 20px;
 	text-align: justify;
+	float: left;
+	height: 80px;
 }
 
 .jurnal-list .list-wrapper .lw-container .list-item .li-button {

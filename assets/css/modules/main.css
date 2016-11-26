@@ -110,6 +110,8 @@
 	float: left;
 	background: white;
 
+	height: 600px;
+
 }
 
 .main-content .m-berita-terbaru .mbt-wrapper .mbt-item:hover {
@@ -132,7 +134,7 @@
 	height:300px;
 }
 
-.main-content .m-berita-terbaru .mbt-wrapper .mbti-title {
+.main-content .m-berita-terbaru .mbt-wrapper .mbt-item .mbti-title {
 	margin: 0;
 	line-height: 130%;
 	float: left;
@@ -147,7 +149,7 @@
 	height: 100px;
 }
 
-.main-content .m-berita-terbaru .mbt-wrapper .mbti-info {
+.main-content .m-berita-terbaru .mbt-wrapper .mbt-item .mbti-info {
 	width: calc(100% - 40px);
 	float: left;
 	padding: 0 0 10px 0;
@@ -156,16 +158,18 @@
 	border-bottom: solid #F0F2F4 1px;
 }
 
-.main-content .m-berita-terbaru .mbt-wrapper .mbti-info .info-module {
+.main-content .m-berita-terbaru .mbt-wrapper .mbt-item .mbti-info .info-module {
 	width: 50%; 
 }
 
-.main-content .m-berita-terbaru .mbt-wrapper .mbti-desc {
+.main-content .m-berita-terbaru .mbt-wrapper .mbt-item .mbti-desc {
 	padding: 10px 20px 10px 20px;
 	text-align: justify;
+	float: left;
+	height: 80px;
 }
 
-.main-content .m-berita-terbaru .mbt-wrapper .mbti-button {
+.main-content .m-berita-terbaru .mbt-wrapper .mbt-item .mbti-button {
 	width: 100%;
 	float: left;
 	padding: 20px 20px 20px 20px;

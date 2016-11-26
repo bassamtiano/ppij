@@ -10,6 +10,9 @@
 		
 			$this->load->model('Kesekretariatan_Data');
 			$this->load->model('Kalender');
+
+			$this->load->model('Otsukaresama');
+			$this->load->model('Otsukaresama_Konten');
 		}
 
 		public function adart() {
@@ -32,13 +35,21 @@
 		}
 
 		public function otsukaresama() {
-			$interface['content'] = $this->load->view('pages/otsukaresama', NULL, TRUE);
+			$content_data['data'] = $this->Otsukaresama->get_otsukaresama('otsukaresama.id, otsukaresama.title, otsukaresama_konten.id_otsukaresama, otsukaresama_konten.url');
+
+			$interface['content'] = $this->load->view('pages/otsukaresama', $content_data, TRUE);
 			$this->load->view('main', $interface);	
 		}
 
-		public function otsukaresama_konten() {
-			$interface['content'] = $this->load->view('pages/otsukaresama_konten', NULL, TRUE);
+		public function otsukaresama_konten($id) {
+			$content_data['data'] = $this->Otsukaresama_Konten->select_otsukaresama_konten($id, 'otsukaresama.id, otsukaresama.title, otsukaresama_konten.id_otsukaresama, otsukaresama_konten.url');
+			$content_data['data_title'] = $this->Otsukaresama->find_otsukaresama($id, 'id, title');
+
+			$interface['content'] = $this->load->view('pages/otsukaresama_konten', $content_data, TRUE);
 			$this->load->view('main', $interface);	
+
+			// header('Content-Type: application/json');
+			// echo json_encode($content_data);
 		}
 
 		public function kalender() {

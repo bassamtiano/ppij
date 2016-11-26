@@ -100,4 +100,6 @@ $route['panduanstudi/beasiswa/(:any)'] = 'panduanstudi/beasiswa_konten/$1';
 
 $route['kesekretariatan/kalender/(:any)/(:any)/(:any)/(:any)'] = 'kesekretariatan/kegiatan/$1/$2/$3/$4';
 
+$route['kesekretariatan/otsukaresama/(:any)'] = 'kesekretariatan/otsukaresama_konten/$1';
+
 

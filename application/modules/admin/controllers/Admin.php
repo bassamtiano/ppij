@@ -3,7 +3,16 @@
 	class Admin extends CI_Controller { 
 
 		public function __construct() {
+
 			parent::__construct();
+
+			$this->load->library(array('ion_auth','form_validation'));
+			$this->form_validation->set_error_delimiters($this->config->item('error_start_delimiter', 'ion_auth'), $this->config->item('error_end_delimiter', 'ion_auth'));
+
+			if (!$this->ion_auth->is_admin()) {
+				return redirect('login');
+			}
+			
 
 			$this->load->model('Slideshow');
 			$this->load->model('Events');
@@ -32,9 +41,12 @@
 
 		public function index() {
 			$interface['sidebar'] = $this->load->view('modules/sidebar', NULL, TRUE);
-			$interface['content'] = $this->load->view('pages/jurnal/konten', NULL, TRUE);
+			$interface['content'] = "";
+			// $interface['content'] = $this->load->view('pages/ju', NULL, TRUE);
 
 			$this->load->view('main', $interface);
+
+
 		}
 
 		/* ========== Slide Show Konten =================================================================================
@@ -1087,6 +1099,17 @@
 
 		public function config_edit() {
 			
+		}
+
+		/* ========== Do Log Out ========================================================================================
+		   ============================================================================================================== */
+
+
+		public function do_logout() {
+			$logout = $this->ion_auth->logout();
+
+            $this->session->set_flashdata('message', $this->ion_auth->messages());
+            redirect('login', 'refresh');
 		}
 
 	}

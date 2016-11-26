@@ -24,53 +24,58 @@
 		<div class="row">
 			
 			<div class="col-md-12" style="padding: 0;">
-				
-				<!-- Slider -->
-				<div class="carousel slide" data-ride="carousel" style="margin: 0; padding: 0; width: 100%; ">
+
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
 					<!-- Indicators -->
 					<ol class="carousel-indicators">
-						<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-						<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-						<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+
+						<?php for ($i=0; $i < $count_slideshow; $i++) { ?>
+							
+						<li data-target="#myCarousel" data-slide-to="<?php echo $i; ?>" class="<?php if($i == 0) echo 'active'; ?>" ></li>
+						<!-- <li data-target="#myCarousel" data-slide-to="1"></li>
+						<li data-target="#myCarousel" data-slide-to="2"></li> -->
+
+						<?php } ?>
+
 					</ol>
 
 					<!-- Wrapper for slides -->
-					<div class="carousel-inner" role="listbox" style="width: 100%;  overflow: none;">
+					<div class="carousel-inner" role="listbox">
 
-						<div class="item active">
-							<div class="banner-image" style="background:url(<?php echo base_url('files/pictures/1.jpg') ?>) center center; background-size:cover; height:550px;"></div>
-							<div class="carousel-caption" style="margin-bottom: 15px;">
-								Gambar 1
-							</div>
-						</div>
-						<div class="item">
-							<!-- <img src=" <?php echo base_url() . 'files/pictures/2.jpg' ?> " alt="..." style="width: 100%; max-height: 600px;" > -->
-							<div class="banner-image" style="background:url(<?php echo base_url('files/pictures/2.jpg') ?>) center center; background-size:cover; height:550px;"></div>
-							<div class="carousel-caption" style="margin-bottom: 15px;">
-								Gambar 2
-							</div>
-						</div>
-						<div class="item">
-							<!-- <img src=" <?php echo base_url() . 'files/pictures/3.jpg' ?> " alt="..." style="width: 100%; max-height: 600px;" > -->
-							<div class="banner-image" style="background:url(<?php echo base_url('files/pictures/3.jpg') ?>) center center; background-size:cover; height:550px;"></div>
-							<div class="carousel-caption" style="margin-bottom: 15px;">
-								Gambar 3
-							</div>
-						</div>
 						
+						<?php $scounter = 0; ?>
+						<?php foreach ($slideshow as $skey => $sval): ?>
+							
+							<div class="item <?php if($scounter == 0) echo 'active'; ?>">
+								<div class="banner-image" style="background:url(<?php echo base_url('files/slideshow/img/' . $sval->url) ?>) center center; background-size:cover; height:550px;"></div>
+								<div class="carousel-caption">
+									<h3>
+										<?php echo $sval->title ?>
+									</h3>
+									<p>
+										<?php echo $sval->description ?>
+									</p>
+								</div>
+							</div>
+						<?php $scounter++; ?>
+						<?php endforeach ?>
+
+
 					</div>
 
-					<!-- Controls -->
-					<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+					<!-- Left and right controls -->
+					<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
 						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 						<span class="sr-only">Previous</span>
 					</a>
-					<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+					<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
 						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 						<span class="sr-only">Next</span>
 					</a>
-
 				</div>
+
+				
+				
 
 
 			</div>
@@ -309,7 +314,10 @@
 	<?php 
 		$this->load->view('common_modules/footer');
 
-		echo $modal;
+		if (!empty($modal)) {
+			echo $modal;
+		}
+		
 	?>
 
 

@@ -363,7 +363,7 @@
 	line-height: 200%;
 }
 
-/*== otsukaresama List ===========================================================================================================*/
+/*== otsukaresama List =====================================================================================================*/
 /*==========================================================================================================================*/
 
 .otsukaresama-list {
@@ -438,4 +438,70 @@
 	float: left;
 	padding: 20px 10px 10px 10px;
 	text-align: right;
+}
+
+
+/*== Bagian Otsukaresama Konten ============================================================================================*/
+/*==========================================================================================================================*/
+
+.otsukaresama-konten-content {
+	margin-top:64px;
+	background: #f1f4f9;
+}
+
+.otsukaresama-konten-content .otsukaresama-konten-wrapper {
+
+}
+
+.otsukaresama-konten-content .otsukaresama-konten-wrapper .otsukaresama-konten-item {
+	background: white;
+	float: left;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 100%;
+
+}
+
+.otsukaresama-konten-content .otsukaresama-konten-wrapper .otsukaresama-konten-item .item-title {
+	float: left;
+	width: calc(100% - 60px);
+	padding: 10px 0 10px 0;
+
+	margin: 0 30px;
+
+	border-bottom: solid #F0F2F4 1px;
+
+	text-align: center;
+}
+
+.otsukaresama-konten-content .otsukaresama-konten-wrapper .otsukaresama-konten-item .item-title .logo {
+	width: 100%;
+	float: left;
+}
+
+.otsukaresama-konten-content .otsukaresama-konten-wrapper .otsukaresama-konten-item .item-title .logo img {
+	display: block;
+    margin: 0 auto;
+    height: 100px;
+    margin-bottom: 20px;
+
+}
+
+.otsukaresama-konten-content .otsukaresama-konten-wrapper .otsukaresama-konten-item .item-title h2, h3, h4 {
+	padding: 4px 0;
+	margin: 0;
+}
+
+.otsukaresama-konten-content .otsukaresama-konten-wrapper .otsukaresama-konten-item .item-content {
+	float: left;
+	padding: 10px 30px 30px 30px;
+	width: 100%;
+	text-align: justify;
+	line-height: 200%;
+}
+
+.otsukaresama-konten-content .otsukaresama-konten-wrapper .otsukaresama-konten-item .item-content img {
+	width: 100%;
+	float: left;
+	margin-bottom: 10px;
 }
